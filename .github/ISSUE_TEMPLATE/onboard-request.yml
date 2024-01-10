@@ -324,10 +324,10 @@ body:
       label: Tool Status
       description: Please check one. Tools with "unacceptable statuses will not be able to be onboarded to FIT.
       options: 
-        - label: Stable - The project has reached a stable, usable state. Tools that are stable will be shared on the FIT's main page.
-        - label: Work in Progress - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public. Tools that are works in progress are not ready to feature on the FIT's main page, but will be shared on a separate FIT page.
-        - label: Concept - Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept. Tools that are concepts will not be shared on the FIT.
-        - label: Abandoned - Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development. Tools that are abandoned will not be shared on the FIT.
+        - label: Stable. The project has reached a stable, usable state. Tools that are stable will be shared on the FIT's main page.
+        - label: Work in Progress. Initial development is in progress, but there has not yet been a stable, usable release suitable for the public. Tools that are works in progress are not ready to feature on the FIT's main page, but will be shared on a separate FIT page.
+        - label: Concept. Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept. Tools that are concepts will not be shared on the FIT.
+        - label: Abandoned. Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development. Tools that are abandoned will not be shared on the FIT.
   - type: markdown
     attributes:
       value: |
@@ -342,7 +342,7 @@ body:
     validations:
       required: false
   - type: textarea
-    id: documentationlink
+    id: documentationreflink
     attributes:
       label: Link and or description of documentation
       description: Link and/or describe where and in what form documentation of how to use the tool in appropriate form exists. E.g., this could be a user manual, furnction reference for R documentation, doxygen documentation, or other formats.
@@ -358,7 +358,7 @@ body:
     validations:
       required: false
   - type: textarea
-    id: additionalexamples
+    id: webhosteddocs
     attributes:
       label: Web hosted documentation
       description: Link to any web hosted docuementation (e.g., a pkgdown site for R packages, doxygen site, readthedocs, sphinx) 
