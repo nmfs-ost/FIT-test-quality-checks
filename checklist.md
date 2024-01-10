@@ -7,13 +7,16 @@ These must be met for inclusion; no badge assigned for basic check.
 - [ ] A license is included (Where appropriate, an open source license). Commonly used open source licenses include MIT, GPL 3.0, and Apache 2.0. The unlicense is also an option.
 - [ ] For NOAA developed products where the source code is linked, there is a disclaimer on the readme (example)
 
-## Status
+## Tool Status
+
+Please check one. Tools with "unacceptable statuses will not be able to be onboarded to FIT.
+
 ### Acceptable statuses
-- [ ] Stable
+- [ ] Stable - The project has reached a stable, usable state. Tools that are stable will be shared on the FIT's main page.
+- [ ] Work in Progress - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public. Tools that are works in progress are not ready to feature on the FIT's main page, but will be shared on a separate FIT page.
 ### Unacceptable statuses
-- [ ] Concept
-- [ ] Abandoned
-- [ ] Suspended
+- [ ] Concept - Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept. Tools that are concepts will not be shared on the FIT.
+- [ ] Abandoned - Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development. Tools that are abandoned will not be shared on the FIT.
 
 ## Documentation
 
