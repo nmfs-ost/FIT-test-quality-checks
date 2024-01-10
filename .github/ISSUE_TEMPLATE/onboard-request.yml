@@ -360,11 +360,32 @@ body:
   - type: textarea
     id: additionalexamples
     attributes:
-      label: Web hosted docuementation
+      label: Web hosted documentation
       description: Link to any web hosted docuementation (e.g., a pkgdown site for R packages, doxygen site, readthedocs, sphinx) 
       placeholder:
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: |
+        ## Tests checklist
+        Help the reviewer complete the tests checklist. Missing data will be assumed to not exist.
+  - type: textarea
+    id: integratedtests
+    label: Integrated tests
+    description: describe and link to any integrated tests that have been done. These could be done manually or within a testing framework. Integrated tests mean running the software end-to end to make sure it works.
+  - type: textarea
+    id: unittest
+    label: Unit Testing 
+    description: Describe any unit testing framework used (e.g., testthat, googletest, unittest) that allows running tests with a single command. Please link to your unit tests, if they are in a code repository.
+  - type: textarea
+    id: test coverage
+    label: Test coverage
+    description: Report the test coverage of your tool.If possible, link to the the coverage of your tool online (e.g., on codecov or coveralls). Note that calculating this metric will only be possible if using a unit testing framework. For R users, covr::package_coverage() can be used, or covr can be used to upload the results to codecov or coveralls.
+  - type: textarea
+    id: continuousintegration
+    label: Continuous Integration
+    description: Describe and link to any tests of your package that run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins)
   - type: checkboxes
     id: terms
     attributes:
