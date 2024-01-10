@@ -342,7 +342,7 @@ body:
     validations:
       required: false
   - type: textarea
-    id: documentation link
+    id: documentationlink
     attributes:
       label: Link and or description of documentation
       description: Link and/or describe where and in what form documentation of how to use the tool in appropriate form exists. E.g., this could be a user manual, furnction reference for R documentation, doxygen documentation, or other formats.
@@ -372,20 +372,24 @@ body:
         Help the reviewer complete the tests checklist. Missing data will be assumed to not exist.
   - type: textarea
     id: integratedtests
-    label: Integrated tests
-    description: describe and link to any integrated tests that have been done. These could be done manually or within a testing framework. Integrated tests mean running the software end-to end to make sure it works.
+    attributes:
+      label: Integrated tests
+      description: describe and link to any integrated tests that have been done. These could be done manually or within a testing framework. Integrated tests mean running the software end-to end to make sure it works.
   - type: textarea
     id: unittest
-    label: Unit Testing 
-    description: Describe any unit testing framework used (e.g., testthat, googletest, unittest) that allows running tests with a single command. Please link to your unit tests, if they are in a code repository.
+    attributes:
+      label: Unit Testing 
+      description: Describe any unit testing framework used (e.g., testthat, googletest, unittest) that allows running tests with a single command. Please link to your unit tests, if they are in a code repository.
   - type: textarea
-    id: test coverage
-    label: Test coverage
-    description: Report the test coverage of your tool.If possible, link to the the coverage of your tool online (e.g., on codecov or coveralls). Note that calculating this metric will only be possible if using a unit testing framework. For R users, covr::package_coverage() can be used, or covr can be used to upload the results to codecov or coveralls.
+    id: testcoverage
+    attributes:
+      label: Test coverage
+      description: Report the test coverage of your tool.If possible, link to the the coverage of your tool online (e.g., on codecov or coveralls). Note that calculating this metric will only be possible if using a unit testing framework. For R users, covr::package_coverage() can be used, or covr can be used to upload the results to codecov or coveralls.
   - type: textarea
     id: continuousintegration
-    label: Continuous Integration
-    description: Describe and link to any tests of your package that run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins)
+    attributes:
+      label: Continuous Integration
+      description: Describe and link to any tests of your package that run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins)
   - type: checkboxes
     id: terms
     attributes:
