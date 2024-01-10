@@ -207,7 +207,7 @@ body:
     attributes:
       label: Installation instructions
       description: Short instructions on how to use the tool. Please include [html formatting](https://www.simplehtmlguide.com/cheatsheet.php) instead of markdown.
-      placeholder: "In R, install from GitHub:<br><br><code>remotes::install_github(\"nmfs-fish-tools/SSMSE\")</code><br><br>More details on installation are available on <a href=\"https://github.com/nmfs-fish-tools/ssmse?tab=readme-ov-file#installing-the-ssmse-r-package\">the SSMSE readme</a>."
+      value: "In R, install from GitHub:<br><br><code>remotes::install_github(\"nmfs-fish-tools/SSMSE\")</code><br><br>More details on installation are available on <a href=\"https://github.com/nmfs-fish-tools/ssmse?tab=readme-ov-file#installing-the-ssmse-r-package\">the SSMSE readme</a>."
     validations:
       required: false
   - type: checkboxes
