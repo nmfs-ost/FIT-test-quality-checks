@@ -9,6 +9,7 @@ These must be met for inclusion; no badge assigned for basic check.
 - [ ] A license is included (Where appropriate, [an open source license](https://opensource.org/licenses/)). Commonly used open source licenses include [MIT](https://opensource.org/license/mit/), [GPL 3.0](https://opensource.org/license/gpl-3-0/), and [Apache 2.0](https://opensource.org/license/gpl-3-0/). The [unlicense](https://opensource.org/license/unlicense/) is also an option.
 - [ ] For NOAA developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-fish-tools/resources?tab=readme-ov-file#noaa-license) on the readme
 - [ ] check [Readiness level](https://orta.research.noaa.gov/support/readiness-levels/) chosen by the author
+- [ ] Assign badges based on reviewer's work.
 
 # Checklist for reviewers
 
@@ -21,8 +22,8 @@ If you have any questions, you can ask them directly on this thread by using the
 Check off all that are complete. A badge will be assigned based upon how many are checked off:
 
 - 0-2 checked = red
-- 3-5 checked = orange
-- All 6 checked = green
+- 3-6 checked = orange
+- All 7 checked = green
 
 - [ ] Motivation and/or scope of tool. If appropriate, link to examples where the tool has informed science-based decision making.
 - [ ] Installation instructions that the reviewer can run. If this is a web app, check this off (Reviewer, please try installing and only check off if install is verified)
@@ -40,7 +41,7 @@ Check off all that are complete. A badge will be assigned based upon how many ar
 - 2-4 checked = orange
 - All 5 checked = green
 
-- [ ] Integrated tests have been done (manually or within a testing framework)
+- [ ] [Integrated tests](https://en.wikipedia.org/wiki/Integration_testing) have been done (manually or within a testing framework)
 - [ ] Unit testing framework used (e.g., testthat, googletest, unittest) that allows running tests with a single command
 - [ ] Test coverage acceptable (>40%)
 - [ ] Test coverage excellent (>70%)
