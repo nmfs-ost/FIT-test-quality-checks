@@ -318,16 +318,19 @@ body:
   #     label: which language(s) is the tool written in? (note: could pull this from github meta data)
   ## Tool Status
 
-  - type: checkboxes
-    id: status
+  - type: dropdown
+    id: rl
     attributes:
-      label: Tool Status
-      description: Please check one. Tools with "unacceptable statuses will not be able to be onboarded to FIT.
-      options: 
-        - label: Stable. The project has reached a stable, usable state. Tools that are stable will be shared on the FIT's main page.
-        - label: Work in Progress. Initial development is in progress, but there has not yet been a stable, usable release suitable for the public. Tools that are works in progress are not ready to feature on the FIT's main page, but will be shared on a separate FIT page.
-        - label: Concept. Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept. Tools that are concepts will not be shared on the FIT.
-        - label: Abandoned. Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development. Tools that are abandoned will not be shared on the FIT.
+      label: Readiness Level
+      description: Please select a [Readiness level](https://orta.research.noaa.gov/support/readiness-levels/).
+      options:
+        - label: 1
+        - label: 2
+        - label: 3
+        - label: 4
+        - label: 5
+        - label: 6
+        - label: 7
   - type: markdown
     attributes:
       value: |
