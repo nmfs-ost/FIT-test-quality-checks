@@ -7,9 +7,9 @@ These must be met for inclusion; no badge assigned for basic check.
 - [ ] Metadata complete, as determined by running against the json schema
 - [ ] Links in metadata work
 - [ ] A license is included (Where appropriate, [an open source license](https://opensource.org/licenses/)). Commonly used open source licenses include [MIT](https://opensource.org/license/mit/), [GPL 3.0](https://opensource.org/license/gpl-3-0/), and [Apache 2.0](https://opensource.org/license/gpl-3-0/). The [unlicense](https://opensource.org/license/unlicense/) is also an option.
-- [ ] For NOAA developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-fish-tools/resources?tab=readme-ov-file#noaa-license) on the readme
+- [ ] For NOAA developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-fish-tools/resources?tab=readme-ov-file#noaa-license) on the readme.
 - [ ] check [Readiness level](https://orta.research.noaa.gov/support/readiness-levels/) chosen by the author
-- [ ] Assign badges based on reviewer's work.
+- [ ] After review: Add FIT badges to metadata based on reviewer's work.
 
 # Checklist for reviewers
 
@@ -25,7 +25,7 @@ Check off all that are complete. A badge will be assigned based upon how many ar
 - 3-6 checked = orange
 - All 7 checked = green
 
-- [ ] Description including Motivation and/or scope of tool. If appropriate, link to examples where the tool has informed science-based decision making.
+- [ ] Background text includes a description of the tool and Motivation and/or scope of tool. If appropriate, it also includes link to examples where the tool has informed science-based decision making.
 - [ ] Installation instructions that the reviewer can run. If this is a web app, check this off (Reviewer, please try installing and only check off if install is verified)
 - [ ] A getting started example that the reviewer can run (e.g. R vignette; reviewer, please try running this example and only check off if it verified that it can run)
 - [ ] How to cite the tool 
