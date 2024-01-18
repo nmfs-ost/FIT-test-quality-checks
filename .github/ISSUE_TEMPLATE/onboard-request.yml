@@ -205,15 +205,6 @@ body:
       placeholder: fisheries.toolbox@noaa.gov
     validations:
       required: true
-
-  - type: input
-    id: citelink
-    attributes:
-      label: Citation
-      description: Let users know how to cite the tool. Preferably, a link to the DOI for an article. Other options include using [Zenodo](https://zenodo.org/) to generate a DOI for the source code. If including a text string, please format it using [APA style](https://apastyle.apa.org/style-grammar-guidelines/references/examples).
-      placeholder: https://doi.org/10.1016/j.fishres.2012.10.012
-    validations:
-      required: true
   - type: textarea
     id: references
     attributes:
