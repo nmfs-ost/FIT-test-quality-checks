@@ -84,7 +84,7 @@ body:
       value: |
         ## Documentation checklist
         Help the reviewer complete the documentation checklist. Missing data will be assumed to not exist.
-    - type: textarea
+  - type: textarea
     id: background
     attributes:
       label: Background Text
