@@ -8,7 +8,6 @@ These must be met for inclusion; no badge assigned for basic check.
 - [ ] Links in metadata work
 - [ ] A license is included (Where appropriate, [an open source license](https://opensource.org/licenses/)). Commonly used open source licenses include [MIT](https://opensource.org/license/mit/), [GPL 3.0](https://opensource.org/license/gpl-3-0/), and [Apache 2.0](https://opensource.org/license/gpl-3-0/). The [unlicense](https://opensource.org/license/unlicense/) is also an option.
 - [ ] For NOAA developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-fish-tools/resources?tab=readme-ov-file#noaa-license) on the readme.
-- [ ] check [Readiness level](https://orta.research.noaa.gov/support/readiness-levels/) chosen by the author
 - [ ] After review: Add FIT badges to metadata based on reviewer's work.
 
 # Checklist for reviewers
