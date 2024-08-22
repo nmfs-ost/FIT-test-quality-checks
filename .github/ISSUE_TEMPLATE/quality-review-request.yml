@@ -165,12 +165,12 @@ body:
     attributes:
       label: Continuous Integration
       description: Describe and link to any tests of your package that run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins)
-- type: textarea
+  - type: textarea
     id: sampledata
     attributes:
-      label: Sample Data Available
-      description: Describe and link to any sample data that validates functionality of program.
-- type: textarea
+      label: Sample Data Availability
+      description: Describe and link to any available sample data that validates functionality of program.
+  - type: textarea
     id: usabilitytesting
     attributes:
       label: Usability Testing
