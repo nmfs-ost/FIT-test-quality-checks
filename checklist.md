@@ -37,8 +37,8 @@ Check off all that are complete. A badge will be assigned based upon how many ar
 Check off all that are complete. A badge will be assigned based upon how many are checked off
 
 - 0-1 checked = red
-- 2-4 checked = orange
-- 5 checked = green
+- 2-5 checked = orange
+- 6-7 checked = green
 
 - [ ] [Integrated tests](https://en.wikipedia.org/wiki/Integration_testing) have been done (manually or within a testing framework)
 - [ ] Unit testing framework used (e.g., testthat, googletest, unittest) that allows running tests with a single command
