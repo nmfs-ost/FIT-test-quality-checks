@@ -38,10 +38,12 @@ Check off all that are complete. A badge will be assigned based upon how many ar
 
 - 0-1 checked = red
 - 2-4 checked = orange
-- All 5 checked = green
+- 5 checked = green
 
 - [ ] [Integrated tests](https://en.wikipedia.org/wiki/Integration_testing) have been done (manually or within a testing framework)
 - [ ] Unit testing framework used (e.g., testthat, googletest, unittest) that allows running tests with a single command
 - [ ] Test coverage acceptable (>40%)
 - [ ] Test coverage excellent (>70%)
 - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins)
+- [ ] Sample data provided to validate functionality
+- [ ] Usability tests conducted and results provided
