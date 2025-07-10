@@ -54,7 +54,7 @@ An academic publication takes the most effort and time of these options, but the
 
 #### Tool use documentation
 
-Tool use documentation should instruct the user on how to use the tool. This could be a user guide or function reference, like roxygen, doxygen, or Sphinx.
+Tool use documentation should instruct the user on how to use the tool. This could be a user guide or function reference, like [roxygen](https://r-pkgs.org/man.html), [doxygen](https://www.doxygen.nl/), or [Sphinx](https://www.sphinx-doc.org/).
 
 For example, for an R package, writing roxygen documentation to generate the [function documentation](https://r-pkgs.org/man.html) is typical. 
 
@@ -64,25 +64,31 @@ An advanced features example provides information on how to run the software for
 
 #### Web-hosted Documentation
 
-Web-hosted documentation allows users to more easily browse documentation. Common formats are a pkgdown site, a doxygen site, or readthedocs site.
+Web-hosted documentation allows users to more easily browse documentation. Common formats are a pkgdown site or a doxygen site.
 
 For source code that is hosted on GitHub, using GitHub pages to host the documentation may be an option that allows the user to quickly access the web-hosted documentation. 
 
 There are [instructions to host a NOAA-themed pkgdown site](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/), which includes a [section on automating the pkgdown rendering](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/#automate-your-pkgdown-rendering).
 
-
-Other options include hosting Quarto documentation on the [NMFS Posit Connect server](https://sites.google.com/noaa.gov/nmfs-hq-st-posit-connect/home).
-
-
-
+Other options include hosting [Quarto documentation](https://quarto.org/) on the [NMFS Posit Connect server](https://sites.google.com/noaa.gov/nmfs-hq-st-posit-connect/home).
 
 ### Tests
 
 #### Integrated Tests
 
+Integrated tests are tests that the software system works together as a whole - for example, an integrated test could be completed in a "Getting Started" example. Ideally, these tests are completed within a testing framework, but sometimes that is not possible. In this case, sharing documentation demonstrating that a manual integration test has been completed is acceptable.
+
 #### Unit Testing Framework
 
+A unit testing framework provides a scaffolding for writing and running tests of your software easily. 
+
+For R package developers, this is likely done using the [testthat](https://testthat.r-lib.org/) R package. A great resource to learn how to set up and use testthat is available in the [Testing Basics Chapter of the R packages book](https://r-pkgs.org/testing-basics.html).
+
 #### Test Coverage
+
+Once a unit testing framework is established, it is possible to calculate test coverage to understand how much of your codebase is being tested.
+
+For R package developers, the covr package provides this functionality.
 
 #### Automated Testing on a continuous integrated service
 

@@ -30,7 +30,7 @@ Check off all items that are complete. A badge will be assigned based upon the n
 - [ ] Instructions on how to cite the tool are included.
 - [ ] Documentation on how to use the tool in an appropriate form (e.g., a user manual, or function reference: roxygen, doxygen, Sphinx).
 - [ ] An example demonstrating advanced features or functions is included.
-- [ ] Web-hosted documentation is available (e.g., pkgdown site, doxygen site, readthedocs).
+- [ ] Web-hosted documentation is available (e.g., pkgdown site, doxygen site).
 
 ## Tests
 
