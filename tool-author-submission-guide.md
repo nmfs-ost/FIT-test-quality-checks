@@ -24,15 +24,25 @@ In general, licenses can be changed, but they require agreement from all who con
 
 #### NOAA Disclaimer
 
-Check: is this still needed?
+For tools with source code, add a [NOAA disclaimer](https://github.com/nmfs-ost/FIT-resource-files?tab=readme-ov-file#noaa-license) on the README.md of the source code.
 
 ### Documentation
 
 #### Background Text
 
+The background text should include a description of the tool and its motivation or scope. It should also include a link to examples where the tool has informed science-based decision making, if this is appropriate.
+
+This information can be placed in a README.md file on a source code repository, but it could also be located somewhere else that is easy for users of the software to find.
+
 #### Installation Instructions
 
+Installation instruction should be provided. The tool reviewer must be able to run them and successfully install the software.
+
+If the software does not require user install, e.g., on a web app, no install instructions need to be provided.
+
 #### A Getting Started Example
+
+
 
 #### Citation Instructions
 
