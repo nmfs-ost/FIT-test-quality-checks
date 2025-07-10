@@ -20,9 +20,9 @@ If you have any questions, you can ask them directly on this thread by using the
 
 Check off all items that are complete. A badge will be assigned based upon the number of items checked off:
 
-- 0-2 checked = red
-- 3-6 checked = orange
-- All 7 checked = green
+- 0-1 checked = red
+- 2-4 checked = orange
+- 5-7 checked = green
 
 - [ ] Background text includes a description of the tool and its motivation and/or scope. If appropriate, it also includes a link to examples where the tool has informed science-based decision making.
 - [ ] Installation instructions are provided that the reviewer can run. Reviewer, please attempt installation and only check this off if install is verified. If this is a web app or other software type that does not require installation, check this off.
