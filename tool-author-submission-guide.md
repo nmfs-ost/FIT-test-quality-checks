@@ -42,15 +42,39 @@ If the software does not require user install, e.g., on a web app, no install in
 
 #### A Getting Started Example
 
-
+A "getting started" example should help orient a beginning user to the software when they are using it for the first time. The example could be embedded in or linked on the README.md of a GitHub repository. It could also be hosted elsewhere, but should be easy to find for users of the software. It should demonstrate how to use the software with a concise example and should not go into advanced use cases.
 
 #### Citation Instructions
 
+Citation intructions provide a way for software users to credit your work. The citation should include a DOI, which provides a permanent link to your software or paper describing it. 
+
+There are several ways to get a DOI for your software. One is to write an academic publication, and then users can cite your publication. Another way is to deposit your sofware in a repository such as Zenodo; Zenodo will create a DOI for your submission which is then citable. Finally, an intermediate way is to submit to a journal like the Journal of Open Source Software, which requires a shortened paper so that it is quick for software authors to put together a submission.
+
+An academic publication takes the most effort and time of these options, but the advantage is that publications are a recognized currency in academic spaces. Zenodo takes the least effort and time, but does not provide users with an additional product for learning about the tool. Finally, the Journal of Open Source software takes less effort than typical academic publications, but still may take just as long to publish, depending on the ability to find reviewers.
+
 #### Tool use documentation
+
+Tool use documentation should instruct the user on how to use the tool. This could be a user guide or function reference, like roxygen, doxygen, or Sphinx.
+
+For example, for an R package, writing roxygen documentation to generate the [function documentation](https://r-pkgs.org/man.html) is typical. 
 
 #### Advanced features example
 
+An advanced features example provides information on how to run the software for more advanced use cases. If possible, providing a "real" example can be helpful. This should be easy for users to find, for example, linked on the source code readme, if the source code is hosted.
+
 #### Web-hosted Documentation
+
+Web-hosted documentation allows users to more easily browse documentation. Common formats are a pkgdown site, a doxygen site, or readthedocs site.
+
+For source code that is hosted on GitHub, using GitHub pages to host the documentation may be an option that allows the user to quickly access the web-hosted documentation. 
+
+There are [instructions to host a NOAA-themed pkgdown site](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/), which includes a [section on automating the pkgdown rendering](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/#automate-your-pkgdown-rendering).
+
+
+Other options include hosting Quarto documentation on the [NMFS Posit Connect server](https://sites.google.com/noaa.gov/nmfs-hq-st-posit-connect/home).
+
+
+
 
 ### Tests
 
