@@ -24,9 +24,9 @@ Check off all that are complete. A badge will be assigned based upon how many ar
 - 3-6 checked = orange
 - All 7 checked = green
 
-- [ ] Background text includes a description of the tool and Motivation and/or scope of tool. If appropriate, it also includes link to examples where the tool has informed science-based decision making.
-- [ ] Installation instructions that the reviewer can run. If this is a web app, check this off (Reviewer, please try installing and only check off if install is verified)
-- [ ] A getting started example that the reviewer can run (e.g. R vignette; reviewer, please try running this example and only check off if it verified that it can run)
+- [ ] Background text includes a description of the tool and motivation and/or scope of tool. If appropriate, it also includes link to examples where the tool has informed science-based decision making.
+- [ ] Installation instructions that the reviewer can run. Reviewer, please try installing and only check off if install is verified. If this is a web app or other type of software that does not require installation, check this off.
+- [ ] A getting started example that the reviewer can run (e.g. R vignette). Reviewer, please try running this example and only check off if it verified that it can run.
 - [ ] How to cite the tool 
 - [ ] Documentation of how to use the tool in an appropriate form (e.g., a user manual, function reference: R oxygen, doxygen, Sphinx).
 - [ ] Example demonstrating advanced features or functions
@@ -37,8 +37,8 @@ Check off all that are complete. A badge will be assigned based upon how many ar
 Check off all that are complete. A badge will be assigned based upon how many are checked off
 
 - 0-1 checked = red
-- 2-5 checked = orange
-- 6-7 checked = green
+- 2-4 checked = orange
+- 5-7 checked = green
 
 - [ ] [Integrated tests](https://en.wikipedia.org/wiki/Integration_testing) have been done (manually or within a testing framework)
 - [ ] Unit testing framework used (e.g., testthat, googletest, unittest) that allows running tests with a single command
