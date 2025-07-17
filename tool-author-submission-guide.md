@@ -103,13 +103,16 @@ The first approach is using [`usethis::use_github_action(name = "check-standard"
 Alternatively, [ghactions4r::use_r_cmd_check()](https://nmfs-ost.github.io/ghactions4r/reference/use_r_cmd_check.html) can be used to generate a "caller" GitHub Action workflow file that calls a reusable workflow. This packaged is maintained by staff within NOAA Fisheries' Office of Science and Technology. This approach is best for users who want to use a standard workflow and do not want to maintain their own action. The benefit of this approach is that the bulk of the workflow is maintained within the ghactions4r package, and users can [open issues in the ghactions4r repository](https://github.com/nmfs-ost/ghactions4r/issues/) to report problems in running the workflow. Changes to the ghactions4r workflow are pushed automatically to the user by modifying the reusable workflow within ghactions4r.
 
 
-
-
 #### Sample Data
 
-Each tool should have at least one sample input dataset along with the application results. Instructions should be given on how a user can run the application with the dataset. The instructions should also include a description of the results and/or a results dataset/p to compare when running t
-.tesatad tupni elpmas e
+
+Each tool should have at least one sample input dataset along with the application results. Instructions should be given on how a user can run the application with the dataset. The instructions should also include a description of the results and/or a results dataset/plot to compare when running the tests.
+
 
 #### Usability tests
 
-(GUI tests; what sort of tests, resources)
+
+The user manual should guide the user through navigating the graphical user interface. All UI features should be intuitive and self-documenting. Hover help should be available when the cursor is held over widgets. Whenever the user interacts with the GUI, there should be some feedback to notify the user that the application processed their action.
+
+
+The developer might investigate using GUI testing applications such as shinytest2 or Selenium. Many are free to use and are available for different languages.
