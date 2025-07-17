@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for submitting a tool onboarding request to the NOAA Fisheries Integrated Toolbox (FIT)! To learn more about the FIT and the software it contains, see [the FIT's About Page](https://noaa-fisheries-integrated-toolbox.github.io/resources/about/). To add links within text, please use html a tag syntax with escaped quotations (e.g., `<a href=\"https://noaa-fisheries-integrated-toolbox.github.io/\">FIT</a>`) rather than using markdown syntax. Plain URLs are also acceptable. 
+        Thank you for your tool onboarding request to the NOAA Fisheries Integrated Toolbox (FIT)! For more information about the FIT and its software, please visit the [FIT's About Page](https://noaa-fisheries-integrated-toolbox.github.io/resources/about/). When submitting text that includes links, please use html `<a>` tag syntax with escaped quotations (e.g., `<a href=\"https://noaa-fisheries-integrated-toolbox.github.io/\">FIT</a>`) or plain URLS rather than Markdown.
   - type: dropdown
     id: activedev
     attributes:
@@ -23,7 +23,7 @@ body:
     id: githuborganization
     attributes:
       label: Move source code
-      description: Would you like to move your source code to be in a FIT-associated GitHub organization?
+      description: Would you like to move your source code to be in the nmfs-ost GitHub organization?
       options:
         - "Yes"
         - "No"
@@ -70,15 +70,13 @@ body:
     id: rl
     attributes:
       label: Readiness Level
-      description: Please select a [Readiness level](https://orta.research.noaa.gov/support/readiness-levels/).
+      description: Please select a [software tier (see section 5)](https://www.noaa.gov/administration/nao-201-118-software-governance-and-public-release-policy). Tier 2 and up is in scope for the FIT.
       options:
         - "1"
         - "2"
         - "3"
         - "4"
         - "5"
-        - "6"
-        - "7"
   - type: markdown
     attributes:
       value: |
@@ -165,6 +163,16 @@ body:
     attributes:
       label: Continuous Integration
       description: Describe and link to any tests of your package that run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins)
+  - type: textarea
+    id: sampledata
+    attributes:
+      label: Sample Data Availability
+      description: Describe and link to any available sample data that validates functionality of program.
+  - type: textarea
+    id: usabilitytesting
+    attributes:
+      label: Usability Testing
+      description: Describe and link to any usability tests conducted to improve the functionality of your tool. (These are more common for GUIs or websites.)
   - type: input
     id: logo
     attributes:
