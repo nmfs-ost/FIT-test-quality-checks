@@ -30,19 +30,19 @@ For tools with source code, add a [NOAA disclaimer](https://github.com/nmfs-ost/
 
 #### Background Text
 
-The background text should include a description of the tool and its motivation or scope. It should also include a link to examples where the tool has informed science-based decision making, if this is appropriate.
+The background text should include a description of the tool and its motivation or scope, as well as the developers or organizations involved. It should also include a link to examples where the tool has informed science-based decision making, if this is appropriate. p
 
 This information can be placed in a README.md file on a source code repository, but it could also be located somewhere else that is easy for users of the software to find.
 
 #### Installation Instructions
 
-Installation instruction should be provided. The tool reviewer must be able to run them and successfully install the software.
+Installation instruction should be provided. The tool reviewer must be able to run them and successfully install the software. 
 
 If the software does not require user install, e.g., on a web app, no install instructions need to be provided.
 
 #### A Getting Started Example
 
-A "getting started" example should help orient a beginning user to the software when they are using it for the first time. The example could be embedded in or linked on the README.md of a GitHub repository. It could also be hosted elsewhere, but should be easy to find for users of the software. It should demonstrate how to use the software with a concise example and should not go into advanced use cases.
+A "getting started" example should help orient a beginning user to the software when they are using it for the first time. The example could be embedded in or linked on the README.md of a GitHub repository. It could also be hosted elsewhere, but should be easy to find for users of the software. It should demonstrate how to use the software with a concise example and should not go into advanced use cases. Common examples of 
 
 #### Citation Instructions
 
@@ -92,6 +92,24 @@ For R package developers, the covr package provides this functionality.
 
 #### Automated Testing on a continuous integrated service
 
+Continuous integration services provide the ability to run checks and tests automatically, typically at scheduled times or on making changes to code. The increased frequency of running tests makes it easier to catch issues with the code quickly. Options include [GitHub Actions](https://github.com/features/actions) and [Jenkins](https://www.jenkins.io/). GitHub Actions may be the easiest to set up if the codebase is already on GitHub.
+
+For R packages, running [R cmd check](https://r-pkgs.org/R-CMD-check.html) can be helpful way to ensure your R package is ready for users to download, so it is common to set up R cmd check as the primary automated testing check on a continuous integration service. 
+
+There are 2 common ways within NOAA Fisheries to set up R cmd check.
+
+The first approach is using [`usethis::use_github_action(name = "check-standard")`](https://usethis.r-lib.org/reference/use_github_action.html) to generate a GitHub action workflow file that runs R CMD check using the latest version of R on 3 operating systems (Linux, Windows, and Mac) and using the development version of R and the 1 older version of R on Linux only. This is best for users who may want to customize the workflow file or require custom dependencies or options because the user can get the file from r-lib, but then edit it as they please. You will be responsible for maintaining the GitHub Action on your repository, as updates are NOT pushed automatically from `usethis::use_github_action("check-standard")`.
+
+Alternatively, [ghactions4r::use_r_cmd_check()](https://nmfs-ost.github.io/ghactions4r/reference/use_r_cmd_check.html) can be used to generate a "caller" GitHub Action workflow file that calls a reusable workflow. This packaged is maintained by staff within NOAA Fisheries' Office of Science and Technology. This approach is best for users who want to use a standard workflow and do not want to maintain their own action. The benefit of this approach is that the bulk of the workflow is maintained within the ghactions4r package, and users can [open issues in the ghactions4r repository](https://github.com/nmfs-ost/ghactions4r/issues/) to report problems in running the workflow. Changes to the ghactions4r workflow are pushed automatically to the user by modifying the reusable workflow within ghactions4r.
+
+
+
+
 #### Sample Data
 
+Each tool should have at least one sample input dataset along with the application results. Instructions should be given on how a user can run the application with the dataset. The instructions should also include a description of the results and/or a results dataset/p to compare when running t
+.tesatad tupni elpmas e
+
 #### Usability tests
+
+(GUI tests; what sort of tests, resources)
