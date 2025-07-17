@@ -1,10 +1,12 @@
 # Tool author submission guide
 
-This is supporting documentation to help tool authors submit their tool to the FIT.
+Thanks for considering your tool for inclusion in the Fisheries Integrated Toolbox (FIT)! This  is to support tool authors submit their tool to the FIT.
+
+See something that needs clarification or is factually incorrect? Let the FIT committee know by opening an issue.
 
 ## Meeting the checklist requirements
 
-TODO: Fill this in by checklist item. Provide supporting information for how tool users can go about setting up so that their tool meets the requirements of the checklist. Probably best to go checklist item by checklist item.
+Review of software for inclusion in the FIT is checklist-based. A NOAA internal reviewer will be reviewing your tool for the items on the checklist. The goal of this process is not to "fail" your tool, but rather to provide information so that you can make changes to your tool to meet the appropriate standards for inclusion in the FIT. The FIT committee understands that some checklist items may not be widespread practices within NOAA Fisheries, so this guide is provided as support for implementing new practices.
 
 ### Basics
 
@@ -14,13 +16,13 @@ To help meet this criteria, fill out all required fields of the onboarding form 
 
 #### Links in metadata work
 
-The FIT coordinator will check that links provided in the submitted onboarding form work, so double checking that the links are correct and up to date before submitting is helpful.
+The FIT coordinator will check that links provided in the submitted onboarding form work. We suggest developers double checking that the links they provide are correct before submitting. Note that a working link is required, but not all links are required. There is no need to worry if your software does not need every type of link listed in the onboarding form.
 
 #### License
 
-See complete licensing guidance. In short, if only NOAA FTEs have worked on the tool, an open license is required, and Apache 2.0 or similar licenses are encouraged. If other contributors were included, licensing guidance can be slightly more complicated. Email the FIT service account if you need help figuring out how to license your software.
+See [complete licensing guidance](https://nmfs-opensci.github.io/GitHub-Guide/#sec-license). In short, if only NOAA FTEs have worked on the tool, an open license is required, and Apache 2.0 or similar licenses are encouraged. If other contributors were included, licensing guidance can be slightly more complicated. Email the FIT service account at fisheries.toolbox@noaa.gov if you need help figuring out how to license your software.
 
-In general, licenses can be changed, but they require agreement from all who contributed to the software.
+In general, licenses can be changed, but they require agreement from all who contributed to the software. It is most straightforward to agree on a license before beginning development rather than changing it later.
 
 #### NOAA Disclaimer
 
