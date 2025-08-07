@@ -13,8 +13,8 @@ permissions:
 
 jobs:
   add-checklist:
-    # This job will only run if the comment body contains the '/review-checklist' command.
-    if: github.event.comment.body.trim() == '@review-bot generate checklist'
+    # This job will only run if the comment body contains the '/generate-review-checklist' command.
+    if: github.event.comment.body.trim() == '/generate-review-checklist'
     runs-on: ubuntu-latest
     steps:
       - name: Add Review Checklist
