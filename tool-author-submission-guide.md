@@ -1,11 +1,8 @@
 # Tool author submission guide
 
-Thanks for considering your tool for inclusion in the Fisheries Integrated Toolbox (FIT)! This guide is to support tool authors submitting their tool to the FIT.
-
-Thank you for considering your tool for inclusion in the Fisheries Integrated Toolbox (FIT)! This guide is designed to assist tool authors with the submission process.
+Thank you for considering your tool for inclusion in the Fisheries Integrated Toolbox (FIT)! This guide is designed to assist tool authors with the submission process and accompanies the reviewer checklist.
 
 Should you find anything requiring clarification or correction, please inform the FIT committee by opening an [issue](https://github.com/nmfs-ost/FIT-onboard-and-update/issues).
-
 
 
 ## Meeting the checklist requirements
@@ -14,21 +11,22 @@ Review of software for inclusion in the FIT is checklist-based. A NOAA internal 
 
 The FIT committee recognizes that some checklist items may not be widespread practices within NOAA Fisheries, so this guide is provided as support for implementing new practices.
 
+Below are more description and guidance on how to meet items on the reviewer checklist.
+
 ### Basics
 
 Everything in the “Basics” section is required.
 
-<details>
-  <summary>Metadata</summary>
+#### Metadata is complete
 
 To meet this criteria, fill out all required fields of the onboarding form and follow the instructions. The FIT coordinator will let you know if something is missing or needs clarification.
-</details>
+
+The FIT coordinator will run the metadata against a JSON schema to identify missing information.
 
 #### Links in metadata work
-
 The FIT coordinator will check that the links provided in the submitted onboarding form work. We suggest developers double check that the links they provide are correct before submitting. Note that one working link is required, but not all links are required. There is no need to worry if your software does not have every type of link listed in the onboarding form.
 
-#### License
+#### A License is included
 
 Please note that this guidance is not legal advice.
 
@@ -36,7 +34,8 @@ For comprehensive licensing guidance, refer to the [complete documentation](http
 
 While software licenses can be changed, this typically requires agreement from all contributors. It is therefore recommended to establish a license before development begins to simplify the process.
 
-#### NOAA Disclaimer
+
+#### NOAA Disclaimer on readme
 
 For tools with source code, add a [NOAA disclaimer](https://github.com/nmfs-ost/FIT-resource-files?tab=readme-ov-file#noaa-license) on the README.md of the source code:
 
