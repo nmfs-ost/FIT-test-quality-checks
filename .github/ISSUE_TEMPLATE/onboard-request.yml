@@ -69,9 +69,10 @@ body:
   - type: dropdown
     id: rl
     attributes:
-      label: Readiness Level
+      label: Software tier
       description: Please select a [software tier (see section 5)](https://www.noaa.gov/administration/nao-201-118-software-governance-and-public-release-policy). Tier 2 and up is in scope for the FIT.
       options:
+        - "0"
         - "1"
         - "2"
         - "3"
@@ -110,7 +111,7 @@ body:
     id: citelink
     attributes:
       label: Citation
-      description: Let users know how to cite the tool. Preferably, a link to the DOI for an article. Other options include using [Zenodo](https://zenodo.org/) to generate a DOI for the source code. If including a text string instead, please format it using [APA style](https://apastyle.apa.org/style-grammar-guidelines/references/examples).
+      description: Let users know how to cite the tool. Preferably, a link to the DOI. If including a text string instead, please format it using [APA style](https://apastyle.apa.org/style-grammar-guidelines/references/examples).
       placeholder: https://doi.org/10.1016/j.fishres.2012.10.012
     validations:
       required: true
@@ -118,7 +119,7 @@ body:
     id: documentationreflink
     attributes:
       label: Link and or description of documentation
-      description: Link and/or describe where and in what form documentation of how to use the tool in appropriate form exists. E.g., this could be a user manual, furnction reference for R documentation, doxygen documentation, or other formats.
+      description: Link and/or describe where and in what form documentation of how to use the tool in appropriate form exists. E.g., this could be a user manual, function reference for R documentation, doxygen documentation, or other formats.
       placeholder:
     validations:
       required: false
@@ -410,3 +411,4 @@ body:
       options:
         - label: I agree to follow the FIT's [Code of Conduct](https://github.com/nmfs-fish-tools/Resources/blob/main/CODE_OF_CONDUCT.md)
           required: true
+
