@@ -6,6 +6,8 @@ Thank you for considering your tool for inclusion in the Fisheries Integrated To
 
 Should you find anything requiring clarification or correction, please inform the FIT committee by opening an [issue](https://github.com/nmfs-ost/FIT-onboard-and-update/issues).
 
+
+
 ## Meeting the checklist requirements
 
 Review of software for inclusion in the FIT is checklist-based. A NOAA internal reviewer will assess your tool for the items on the checklist. The purpose of this process is to offer feedback, enabling you to modify your tool to align with the necessary standards for FIT inclusion.
@@ -16,9 +18,11 @@ The FIT committee recognizes that some checklist items may not be widespread pra
 
 Everything in the “Basics” section is required.
 
-#### Metadata
+<details>
+  <summary>Metadata</summary>
 
 To meet this criteria, fill out all required fields of the onboarding form and follow the instructions. The FIT coordinator will let you know if something is missing or needs clarification.
+</details>
 
 #### Links in metadata work
 
@@ -140,4 +144,5 @@ The user manual should provide clear guidance on navigating the graphical user i
 All UI features should be intuitive and self-explanatory.
 Hover-over help should be available for all widgets.
 The application should provide feedback to the user after every interaction with the GUI, confirming that the action has been processed.
+
 
