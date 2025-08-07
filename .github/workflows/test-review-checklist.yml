@@ -1,0 +1,51 @@
+# .github/workflows/test-review-checklist.yml
+
+name: 'Review Checklist'
+
+# This workflow will be triggered when a comment is created on a pull request or issue.
+on:
+  issue_comment:
+    types: [created]
+
+# We need permissions to update issue comments.
+permissions:
+  issues: write
+
+jobs:
+  add-checklist:
+    # This job will only run if the comment body contains the '/review-checklist' command.
+    if: contains(github.event.comment.body, '/review-checklist')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Review Checklist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // This script uses the GitHub REST API to update the comment.
+            // The `github.rest.issues.updateComment` method takes the
+            // owner, repo, comment_id, and the new body as arguments.
+
+            // Define the new checklist in GitHub-flavored Markdown.
+            // You can customize this checklist to fit your team's needs.
+            const reviewChecklist = `
+            ### ✅ Reviewer Checklist (test)
+
+            Please review the following items before approving this change:
+
+            - [ ] **Tests**: Are there new or updated tests to cover the changes? Do all tests pass?
+            - [ ] **Documentation**: Is the code, especially new or complex parts, well-documented?
+
+            `;
+
+            // Call the GitHub API to update the comment with the new checklist.
+            try {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: context.payload.comment.id,
+                body: reviewChecklist,
+              });
+              console.log('Successfully updated comment with review checklist.');
+            } catch (error) {
+              console.error('Failed to update comment:', error);
+            }
