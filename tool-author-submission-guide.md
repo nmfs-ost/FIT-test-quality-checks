@@ -56,8 +56,6 @@ To be onboarded to the FIT, a tool must meet 4 out of 7 documentation checklist 
 
 The background text should include a description of the tool and its motivation or scope, as well as the developers or organizations involved. It should also include a link to examples where the tool has informed science-based decision making, if this is appropriate.
 
-If the source code is linked, this information should be placed in a README.md file on the source code repository. Otherwise, it could also be located somewhere else that is easy for users of the software to find.
-
 #### Installation Instructions
 
 Installation instructions should be provided. The tool reviewer must be able to run them and successfully install the software.
@@ -71,10 +69,12 @@ For first-time users, a "getting started" example is crucial for orienting them 
 #### Citation Instructions
 
 To ensure users properly credit your work, provide citation instructions that include a Digital Object Identifier (DOI). A DOI offers a persistent link to your software or the accompanying paper.
+
 There are three primary methods for obtaining a DOI for your software:
-Academic Publication: This involves writing and publishing an academic paper. Users can then cite this publication. While it demands the most effort and time, academic publications are a recognized form of currency in scholarly environments.
-Software Repository (e.g., [Zenodo](https://zenodo.org/)): Depositing your software in a repository like Zenodo will generate a citable DOI for your submission. This method requires the least effort and time, but it doesn't offer users an additional resource for learning about the tool.
-Open Source Software Journal (e.g., [Journal of Open Source Software](https://joss.theoj.org/)): Journals such as the Journal of Open Source Software require a concise paper, allowing software authors to quickly prepare a submission. This option demands less effort than typical academic publications, though the publication timeline can still be lengthy depending on the review process.
+
+1. Academic Publication: This involves writing and publishing an academic paper. Users can then cite this publication. While it demands the most effort and time, academic publications are a recognized form of currency in scholarly environments.
+2. Software Repository (e.g., [Zenodo](https://zenodo.org/)): Depositing your software in a repository like Zenodo will generate a citable DOI for your submission. This method requires the least effort and time, but it doesn't offer users an additional resource for learning about the tool.
+3. Open Source Software Journal (e.g., [Journal of Open Source Software](https://joss.theoj.org/)): Journals such as the Journal of Open Source Software require a concise paper, allowing software authors to quickly prepare a submission. This option demands less effort than typical academic publications, though the publication timeline can still be lengthy depending on the review process.
 
 #### Tool use documentation
 
