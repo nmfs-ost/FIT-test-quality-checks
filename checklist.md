@@ -7,6 +7,7 @@ These must be met for inclusion; no badge assigned for basic check.
 - [ ] Metadata is complete, as determined by running against the json schema
 - [ ] Links in metadata work
 - [ ] A license is included (where appropriate, [an open source license](https://opensource.org/licenses/)).
+- [ ] Software version is included
 - [ ] For NOAA-developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-ost/FIT-resource-files?tab=readme-ov-file#noaa-license) on the readme of the source code.
 - [ ] After review: Add FIT badges to metadata based on reviewer's https://github.com/nmfs-fish-tools/resources?tab=readme-ov-file#noaa-licensework.
 
@@ -47,3 +48,4 @@ Check off all items that are complete. A badge will be assigned based on the num
 - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins).
 - [ ] Sample data provided to validate functionality.
 - [ ] Usability tests have been conducted and results are provided.
+
