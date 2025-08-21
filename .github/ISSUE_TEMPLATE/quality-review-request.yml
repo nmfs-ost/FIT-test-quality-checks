@@ -31,6 +31,13 @@ body:
         - "Not applicable"
     validations:
       required: true
+  - type: input
+    id: opensource
+    attributes:
+      label: Is the source code available? If it is not, please explain why.
+      description: The NOAA FIT encourages source code to be available whenever possible. However, there may be some instances where it cannot be (e.g., source code contains confidential fisheries information).
+    validations:
+      required: true
     # Links to the Tool
   - type: markdown
     attributes:

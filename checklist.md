@@ -4,6 +4,7 @@
 
 ## Mandatory items
 
+- [ ] Confirm that tool is in scope per the [FIT scope statement](https://noaa-fisheries-integrated-toolbox.github.io/resources/about/)
 - [ ] Metadata is complete, as determined by running against the [json schema](https://github.com/nmfs-ost/FIT_web_templating/blob/main/schema_model_list.json)
 - [ ] Links in metadata work
 - [ ] A license is included (where appropriate, [an open source license](https://opensource.org/licenses/)).
