@@ -45,10 +45,11 @@ Check off all items that are complete.
 - [ ] Sample data provided to validate functionality.
 - [ ] [Usability tests](https://digital.gov/topics/usability) have been conducted and results are sufficiently described (can be qualitative).
 
-### Good practices items
+### Good practices items (not mandatory)
 
 - [ ] [Code coverage](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage) is excellent (>70% line coverage).
 - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins).
+
 
 
 
