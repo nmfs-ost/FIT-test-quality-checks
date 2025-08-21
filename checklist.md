@@ -8,7 +8,10 @@
 - [ ] Links in metadata work
 - [ ] A license is included (where appropriate, [an open source license](https://opensource.org/licenses/)).
 - [ ] Software version is included
+- [ ] Source code is linked (note: check this off if source code is not linked and there is a valid reason for source code to be kept private)
 - [ ] For NOAA-developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-ost/FIT-resource-files?tab=readme-ov-file#noaa-license) on the readme of the source code.
+- [ ] For Web Apps: All errors resolved using [WAVE](https://wave.webaim.org/)
+- [ ] For other GUIs that are not web-hosted: *add other tool to check accessibility*
 
 # Checklist for reviewers
 
