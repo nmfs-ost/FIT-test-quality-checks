@@ -180,7 +180,7 @@ body:
     id: usabilitytesting
     attributes:
       label: Usability Testing
-      description: Describe and link to any usability tests conducted to improve the functionality of your tool. (These are more common for GUIs or websites.)
+      description: Describe and link to any usability tests conducted to improve the functionality of your tool.
   - type: input
     id: logo
     attributes:
