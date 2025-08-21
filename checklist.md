@@ -42,9 +42,10 @@ Check off all items that are complete. A badge will be assigned based on the num
 
 - [ ] [Integrated tests](https://en.wikipedia.org/wiki/Integration_testing) have been conducted (manually or within a testing framework).
 - [ ] A unit testing framework (e.g., testthat, googletest, unittest) is used that allows running tests with a single command.
-- [ ] Test coverage is acceptable (>40%).
-- [ ] Test coverage is excellent (>70%).
+- [ ] [Code coverage](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage) is acceptable (>40% line coverage).
+- [ ] [Code coverage](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage) is excellent (>70% line coverage).
 - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins).
 - [ ] Sample data provided to validate functionality.
 - [ ] Usability tests have been conducted and results are provided.
+
 
