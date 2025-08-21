@@ -54,7 +54,12 @@ Check off all items that are complete.
 - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins).
 
 
+# Post acceptance checklist
 
+For the FIT coordinator
 
+- [ ] Add to FIT test site and have author verify it looks as expected
+- [ ] If R package, add to the FIT R universe
+- [ ] Add to FIT production site
 
 
