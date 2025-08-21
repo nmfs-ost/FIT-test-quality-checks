@@ -238,6 +238,13 @@ body:
       placeholder: r4ss https://r4ss.github.io/r4ss/, ss3sim https://ss3sim.github.io/ss3sim/
     validations:
       required: false
+  - type: textarea
+    id: useinmanagement
+    attributes:
+      label: Tool's Use in Management
+      description: Please describe how the tool has been used in management processes. Links to reports or other documents encouraged!
+    validations:
+      required: false
   - type: input
     id: userorganizations
     attributes:
