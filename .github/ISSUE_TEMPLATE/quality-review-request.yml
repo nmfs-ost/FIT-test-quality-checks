@@ -74,18 +74,17 @@ body:
     validations:
       required: false
   - type: dropdown
-    id: rl
+    id: softwaretier
     attributes:
-      label: Readiness Level
-      description: Please select a [Readiness level](https://orta.research.noaa.gov/support/readiness-levels/).
+      label: Software Tier
+      description: Please select a Software Tier using section 5 of the [Software Governance and Public Release NAO](https://www.noaa.gov/administration/nao-201-118-software-governance-and-public-release-policy).
       options:
+        - "0"
         - "1"
         - "2"
         - "3"
         - "4"
         - "5"
-        - "6"
-        - "7"
   - type: markdown
     attributes:
       value: |
