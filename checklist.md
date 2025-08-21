@@ -4,7 +4,7 @@
 
 These must be met for inclusion; no badge assigned for basic check.
 
-- [ ] Metadata is complete, as determined by running against the json schema
+- [ ] Metadata is complete, as determined by running against the [json schema](https://github.com/nmfs-ost/FIT_web_templating/blob/main/schema_model_list.json)
 - [ ] Links in metadata work
 - [ ] A license is included (where appropriate, [an open source license](https://opensource.org/licenses/)).
 - [ ] Software version is included
@@ -47,5 +47,6 @@ Check off all items that are complete. A badge will be assigned based on the num
 - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins).
 - [ ] Sample data provided to validate functionality.
 - [ ] Usability tests have been conducted and results are provided.
+
 
 
