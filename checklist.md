@@ -20,29 +20,17 @@ Thanks for reviewing this tool! Please use the information submitted by the tool
 
 If you have any questions, you can ask them directly on this thread by using the `@` in front of their github username in a comment.
 
-## Documentation
-
 Check off all items that are complete.
 
-### Mandatory items
+## Mandatory items
 
+### Documentation
 - [ ] Background text includes a description of the tool and its motivation and/or scope. If appropriate, it also includes a link to examples where the tool has informed science-based decision making.
 - [ ] Installation instructions are provided that the reviewer can run. Reviewer, please attempt installation and only check this off if install is verified. If this is a web app or other software type that does not require installation, check this off.
 - [ ] A getting started example (e.g., R vignette) is provided that the reviewer can run. Reviewer, attempt to run this example and only check this off if verified to run.
 - [ ] Instructions on how to cite the tool are included.
 - [ ] Documentation on how to use the tool in an appropriate form (e.g., a user manual, or function reference: roxygen, doxygen, Sphinx).
-
-### Good practices items (not mandatory)
-
-- [ ] An example demonstrating advanced features or functions is included.
-- [ ] Web-hosted documentation is available (e.g., pkgdown site, doxygen site).
-
-## Tests
-
-Check off all items that are complete.
-
-### Mandatory Items
-
+### Tests
 - [ ] [Integrated tests](https://en.wikipedia.org/wiki/Integration_testing) have been conducted (manually or within a testing framework).
 - [ ] A unit testing framework (e.g., testthat, googletest, unittest) is used that allows running tests with a single command.
 - [ ] [Code coverage](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage) is acceptable (>40% line coverage).
@@ -51,9 +39,10 @@ Check off all items that are complete.
 
 ### Good practices items (not mandatory)
 
+- [ ] An example demonstrating advanced features or functions is included.
+- [ ] Web-hosted documentation is available (e.g., pkgdown site, doxygen site).
 - [ ] [Code coverage](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage) is excellent (>70% line coverage).
 - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins).
-
 
 # Post acceptance checklist
 
@@ -62,5 +51,6 @@ For the FIT coordinator
 - [ ] Add to FIT test site and have author verify it looks as expected
 - [ ] If R package, add to the FIT R universe
 - [ ] Add to FIT production site
+
 
 
