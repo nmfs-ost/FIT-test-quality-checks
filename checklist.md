@@ -11,9 +11,9 @@
 - [ ] Software version is included
 - [ ] Source code is linked (note: check this off if source code is not linked and there is a valid reason for source code to be kept private)
 - [ ] For NOAA-developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-ost/FIT-resource-files?tab=readme-ov-file#noaa-license) on the readme of the source code.
-- [ ] For Web Apps: All errors resolved using [WAVE](https://wave.webaim.org/)
-- [ ] For other GUIs that are not web-hosted: *add other tool to check accessibility*
-
+- [ ] For Web apps and other apps that use web technologies: All errors resolved using [ANDI](https://www.ssa.gov/accessibility/andi/help/install.html)
+- [ ] For other GUIs that do not use web technologies: *need more info on how to test these*
+      
 # Checklist for reviewers
 
 Thanks for reviewing this tool! Please use the information submitted by the tool authors to complete the checklist.
@@ -51,6 +51,7 @@ For the FIT coordinator
 - [ ] Add to FIT test site and have author verify it looks as expected
 - [ ] If R package, add to the FIT R universe
 - [ ] Add to FIT production site
+
 
 
 
