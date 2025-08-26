@@ -1,0 +1,57 @@
+# .github/workflows/test-review-checklist.yml
+
+name: 'Generate Basics Checklist'
+
+# This workflow will be triggered when a comment is created on a pull request or issue.
+on:
+  issue_comment:
+    types: [created]
+
+# We need permissions to update issue comments.
+permissions:
+  issues: write
+
+jobs:
+  add-basics-checklist:
+    # This job will only run if the comment body contains the '/generate-review-checklist' command.
+    if: startsWith(github.event.comment.body, '/generate-basics-checklist') && contains(fromJSON('["MEMBER", "OWNER"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Basics Checklist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // This script uses the GitHub REST API to update the comment.
+            // The `github.rest.issues.updateComment` method takes the
+            // owner, repo, comment_id, and the new body as arguments.
+
+            // Define the new checklist in GitHub-flavored Markdown.
+            const reviewChecklist = `
+            # Basics - For the FIT coordinator to fill out
+
+            ## Mandatory items
+
+            - [ ] Confirm that tool is in scope per the [FIT scope statement](https://noaa-fisheries-integrated-toolbox.github.io/resources/about/)
+            - [ ] Metadata is complete, as determined by running against the [json schema](https://github.com/nmfs-ost/FIT_web_templating/blob/main/schema_model_list.json)
+            - [ ] Links in metadata work
+            - [ ] A license is included (where appropriate, [an open source license](https://opensource.org/licenses/)).
+            - [ ] Software version is included
+            - [ ] Source code is linked (note: Check this off if source code is not linked and there is a valid reason for source code to be kept private)
+            - [ ] For NOAA-developed products where the source code is linked, there is a [NOAA disclaimer](https://github.com/nmfs-ost/FIT-resource-files?tab=readme-ov-file#noaa-license) on the readme of the source code.
+            - [ ] For Web apps and other apps that use web technologies: All errors resolved using [ANDI](https://www.ssa.gov/accessibility/andi/help/install.html)
+            - [ ] For other GUIs that do not use web technologies: *need more info on how to test these*
+
+            `;
+
+            // Call the GitHub API to update the comment with the new checklist.
+            try {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: context.payload.comment.id,
+                body: reviewChecklist,
+              });
+              console.log('Successfully updated comment with review checklist.');
+            } catch (error) {
+              console.error('Failed to update comment:', error);
+            }

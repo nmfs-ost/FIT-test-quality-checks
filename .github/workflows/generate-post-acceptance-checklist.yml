@@ -1,6 +1,6 @@
 # .github/workflows/test-review-checklist.yml
 
-name: 'Review Checklist'
+name: 'Generate Post-Acceptance Checklist'
 
 # This workflow will be triggered when a comment is created on a pull request or issue.
 on:
@@ -12,12 +12,12 @@ permissions:
   issues: write
 
 jobs:
-  add-checklist:
+  add-basics-checklist:
     # This job will only run if the comment body contains the '/generate-review-checklist' command.
-    if: startsWith(github.event.comment.body, '/generate-review-checklist')
+    if: startsWith(github.event.comment.body, '/generate-post-acceptance-checklist') && contains(fromJSON('["MEMBER", "OWNER"]'), github.event.comment.author_association)
     runs-on: ubuntu-latest
     steps:
-      - name: Add Review Checklist
+      - name: Add Basics Checklist
         uses: actions/github-script@v7
         with:
           script: |
@@ -26,14 +26,13 @@ jobs:
             // owner, repo, comment_id, and the new body as arguments.
 
             // Define the new checklist in GitHub-flavored Markdown.
-            // You can customize this checklist to fit your team's needs.
             const reviewChecklist = `
-            ### ✅ Reviewer Checklist (test)
+            # Post-acceptance checklist - For the FIT coordinator
 
-            Please review the following items before approving this change:
-
-            - [ ] **Tests**: Are there new or updated tests to cover the changes? Do all tests pass?
-            - [ ] **Documentation**: Is the code, especially new or complex parts, well-documented?
+            - [ ] Add software to FIT test site and have author verify it looks as expected
+            - [ ] If R package, add to the FIT R universe
+            - [ ] Add to FIT production site and share production page
+            - [ ] Close review issue
 
             `;
 

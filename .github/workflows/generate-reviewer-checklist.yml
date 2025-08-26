@@ -1,0 +1,74 @@
+# .github/workflows/test-review-checklist.yml
+
+name: 'Generate Reviewer Checklist'
+
+# This workflow will be triggered when a comment is created on a pull request or issue.
+on:
+  issue_comment:
+    types: [created]
+
+# We need permissions to update issue comments.
+permissions:
+  issues: write
+
+jobs:
+  add-reviewer-checklist:
+    # This job will only run if the comment body contains the '/generate-review-checklist' command.
+    if: startsWith(github.event.comment.body, '/generate-reviewer-checklist') && contains(fromJSON('["COLLABORATOR", "MEMBER", "OWNER"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Review Checklist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // This script uses the GitHub REST API to update the comment.
+            // The `github.rest.issues.updateComment` method takes the
+            // owner, repo, comment_id, and the new body as arguments.
+
+            // Define the new checklist in GitHub-flavored Markdown.
+            const reviewChecklist = `
+            # Checklist for reviewers
+
+            Thanks for reviewing this tool! Please use the information submitted by the tool authors to complete the checklist.
+
+            If you have any questions, you can ask them directly on this thread by using the `@` in front of their github username in a comment.
+
+            Check off all items that are complete.
+
+            ## Mandatory items
+
+            ### Documentation
+            - [ ] Background text includes a description of the tool and its motivation and/or scope. If appropriate, it also includes a link to examples where the tool has informed science-based decision making.
+            - [ ] Installation instructions are provided that the reviewer can run. Reviewer, please attempt installation and only check this off if install is verified. If this is a web app or other software type that does not require installation, check this off.
+            - [ ] A getting started example (e.g., R vignette) is provided that the reviewer can run. Reviewer, attempt to run this example and only check this off if verified to run.
+            - [ ] Instructions on how to cite the tool are included.
+            - [ ] Documentation on how to use the tool in an appropriate form (e.g., a user manual, or function reference: roxygen, doxygen, Sphinx).
+            ### Tests
+            - [ ] [Integrated tests](https://en.wikipedia.org/wiki/Integration_testing) have been conducted (manually or within a testing framework).
+            - [ ] A unit testing framework (e.g., testthat, googletest, unittest) is used that allows running tests with a single command.
+            - [ ] [Code coverage](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage) is acceptable (>40% line coverage).
+            - [ ] Sample data provided to validate functionality.
+            - [ ] [Usability tests](https://digital.gov/topics/usability) have been conducted and results are sufficiently described (can be qualitative).
+
+            ### Good practices items (not mandatory)
+
+            - [ ] An example demonstrating advanced features or functions is included.
+            - [ ] Web-hosted documentation is available (e.g., pkgdown site, doxygen site).
+            - [ ] [Code coverage](https://www.atlassian.com/continuous-delivery/software-testing/code-coverage) is excellent (>70% line coverage).
+            - [ ] Tests set up on a continuous integration service to run automatically on code changes or on a schedule (e.g., on GitHub Actions, Travis, Jenkins).
+
+
+            `;
+
+            // Call the GitHub API to update the comment with the new checklist.
+            try {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: context.payload.comment.id,
+                body: reviewChecklist,
+              });
+              console.log('Successfully updated comment with review checklist.');
+            } catch (error) {
+              console.error('Failed to update comment:', error);
+            }
