@@ -27,7 +27,7 @@ jobs:
 
             
             // Extract and define the users github name
-            const githubName = context.event.comment.body.match(/\@\S*$/);
+            //const githubName = context.event.comment.body.match(/\@\S*$/);
             // Define the new checklist in GitHub-flavored Markdown.
             const reviewChecklist = `   
             Thank you for volunteering to review this submission to the Fisheries Integrated Toolbox. This is a checklist-based review.
@@ -39,7 +39,7 @@ jobs:
 
             `;
 
-            const finalReviewChecklist = githubName + reviewChecklist;
+            const finalReviewChecklist = reviewChecklist;
 
             // Call the GitHub API to update the comment with the new checklist.
             try {
