@@ -29,12 +29,11 @@ jobs:
             const commands = `
             # Available commands
 
-            
-            - /`//generate-basics-checklist/` edits the comment with the basics checklist. This is intended for the FIT coordinator.
-            - /`//generate-reviewer-instructions/` edits the comment with the reviewer instructions. This is intended for the FIT coordinator.
-            - /`//genearte-reviewer-checklist/` edits the comment with the reviewer checklist. This is intended for the reviewer.
-            - /`//generate-post-acceptance-checklist/` edits the comment with the post-acceptance checklist. This is intendeded for the FIT coordinator.
-            - /`//list-commands/` lists all the available commands in a new comment.
+            - /`generate-basics-checklist/` edits the comment with the basics checklist. This is intended for the FIT coordinator.
+            - /`generate-reviewer-instructions/` edits the comment with the reviewer instructions. This is intended for the FIT coordinator.
+            - /`genearte-reviewer-checklist/` edits the comment with the reviewer checklist. This is intended for the reviewer.
+            - /`generate-post-acceptance-checklist/` edits the comment with the post-acceptance checklist. This is intendeded for the FIT coordinator.
+            - /`list-commands/` lists all the available commands in a new comment.
             `;
 
             // Call the GitHub API to create a comment with the commands.
