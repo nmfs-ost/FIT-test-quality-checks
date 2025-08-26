@@ -1,0 +1,52 @@
+# .github/workflows/test-review-checklist.yml
+
+name: 'List commands'
+
+# This workflow will be triggered when a comment is created on a pull request or issue.
+on:
+  issue_comment:
+    types: [created]
+
+# We need permissions to update issue comments.
+permissions:
+  issues: write
+
+jobs:
+  listcommands:
+    # This job will only run if the comment body contains the '/generate-review-checklist' command.
+    if: startsWith(github.event.comment.body, '/list-commands') && contains(fromJSON('["MEMBER", "OWNER"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add Basics Checklist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // This script uses the GitHub REST API to update the comment.
+            // The `github.rest.issues.updateComment` method takes the
+            // owner, repo, comment_id, and the new body as arguments.
+
+            // Define the new checklist in GitHub-flavored Markdown.
+            const commands = `
+            # Available commands
+
+            
+            - /`//generate-basics-checklist/` edits the comment with the basics checklist. This is intended for the FIT coordinator.
+            - /`//generate-reviewer-instructions/` edits the comment with the reviewer instructions. This is intended for the FIT coordinator.
+            - /`//genearte-reviewer-checklist/` edits the comment with the reviewer checklist. This is intended for the reviewer.
+            - /`//generate-post-acceptance-checklist/` edits the comment with the post-acceptance checklist. This is intendeded for the FIT coordinator.
+            - /`//list-commands/` lists all the available commands in a new comment.
+            `;
+
+            // Call the GitHub API to create a comment with the commands.
+            try {
+
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commands
+              });
+              console.log('Successfully added comment with commands.');
+            } catch (error) {
+              console.error('Failed to add comment:', error);
+            }
