@@ -17,7 +17,7 @@ jobs:
     if: startsWith(github.event.comment.body, '/generate-reviewer-instructions') && contains(fromJSON('["MEMBER", "OWNER"]'), github.event.comment.author_association)
     runs-on: ubuntu-latest
     steps:
-      - name: Add Basics Checklist
+      - name: Add Reviewer instructions
         uses: actions/github-script@v7
         with:
           script: |
@@ -25,16 +25,21 @@ jobs:
             // The `github.rest.issues.updateComment` method takes the
             // owner, repo, comment_id, and the new body as arguments.
 
+            
+            // Extract and define the users github name
+            const githubName = context.event.comment.body.match(/\@\S*$/);
             // Define the new checklist in GitHub-flavored Markdown.
-            const reviewChecklist = `
-            @github-name, thank you for volunteering to review this submission to the Fisheries Integrated Toolbox. This is a checklist-based review.
+            const reviewChecklist = `   
+            Thank you for volunteering to review this submission to the Fisheries Integrated Toolbox. This is a checklist-based review.
 
             1. Generate your review checklist by commenting on this issue using the command /generate-reviewer-checklist
-            2. Fill out the checklist using the submitted information provided by the developer (scroll up to the top of the issue). Helpful hint: Duplicate the brower window to see the developer's submission and your review checklist at the same time.
+            2. Fill out the checklist using the submitted information provided by the developer (scroll up to the top of the issue). Helpful hint: 
             3. If you feel detailed changes are needed to meet checklist requirements, or have a specific suggestion for a developer, we suggest opening issues on the repository itself to avoid lengthy discussions on the review thread.
-            3. Please feel free to ask the developer any questions.
+            4. Please feel free to ask the developer any questions, as this is an open review process.
 
             `;
+
+            const finalReviewChecklist = githubName + reviewChecklist;
 
             // Call the GitHub API to update the comment with the new checklist.
             try {
@@ -42,7 +47,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 comment_id: context.payload.comment.id,
-                body: reviewChecklist,
+                body: finalReviewChecklist,
               });
               console.log('Successfully updated comment with review checklist.');
             } catch (error) {
