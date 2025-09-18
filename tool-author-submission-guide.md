@@ -118,27 +118,27 @@ Other options include hosting [Quarto documentation](https://quarto.org/) on the
 
 ### Tests
 
-To be onboarded to the FIT, a tool must meet 4 out of 7 tests checklist items.
+To be onboarded to the FIT, a tool must meet 4 out of 6 criteria described below.
 
-#### Integrated Tests
+#### 1. Integrated Tests
 
-Integrated tests are tests that the software system works together as a whole - for example, an integrated test could be completed in a "Getting Started" example. Ideally, these tests are completed within a testing framework, but sometimes that is not possible. In this case, sharing documentation demonstrating that a manual integration test has been completed is acceptable.
+Integrated tests show that the software system works together as a whole - for example, an integrated test could be completed in a "Getting Started" example. Ideally, these tests are completed within a testing framework, but sometimes that is not possible. In these cases, sharing documentation demonstrating that a manual integration test has been completed is acceptable.
 
-#### Unit Testing Framework
+#### 2. Unit Testing Framework
 
-A unit testing framework provides a scaffolding for writing and running tests of your software easily. 
+A unit testing framework provides a scaffolding for easily writing and running tests of your software. 
 
 For R package developers, this is likely done using the [testthat](https://testthat.r-lib.org/) R package. A great resource to learn how to set up and use testthat is available in the [Testing Basics Chapter of the R packages book](https://r-pkgs.org/testing-basics.html).
 
 For applications, consider GUI testing toolkits like shinytest2 for Shiny apps or Selenium for web applications.
 
-#### Test Coverage
+#### 3. Test Coverage
 
 Once a unit testing framework is established, it is possible to calculate test coverage to understand how much of your codebase is being tested.
 
 For R package developers, the [covr](https://covr.r-lib.org/) package provides this functionality. For Python, [Coverage.py](https://coverage.readthedocs.io/en/7.10.2/) and [pytest-cov](https://pypi.org/project/pytest-cov/) are popular tools. For C++, [gcovr](https://gcovr.com/en/stable/) could be used.
 
-#### Automated Testing on a continuous integrated service
+#### 4. Automated Testing on a continuous integrated service
 
 Continuous integration services, such as [GitHub Actions](https://github.com/features/actions) and [Jenkins](https://www.jenkins.io/), automate checks and tests. Running these checks and tests frequently, either on a schedule or when code changes are made, helps to quickly identify and resolve code issues. GitHub Actions is often the simplest to configure if your codebase is already hosted on GitHub.
 
@@ -146,17 +146,17 @@ For R packages, running [R cmd check](https://r-pkgs.org/R-CMD-check.html) can b
 
 There are 2 common ways within NOAA Fisheries to set up R cmd check.
 
-The first approach is using [`usethis::use_github_action(name = "check-standard")`](https://usethis.r-lib.org/reference/use_github_action.html) to generate a GitHub action workflow file that runs R CMD check using the latest version of R on 3 operating systems (Linux, Windows, and Mac) and using the development version of R and the 1 older version of R on Linux only. This approach is best for users who may want to customize the workflow file or require custom dependencies or options because the user can edit the GitHub Actions file as they please. You will be responsible for maintaining the GitHub Action on your repository, as updates are NOT pushed automatically from `usethis::use_github_action("check-standard")`.
+The first approach is using [`usethis::use_github_action(name = "check-standard")`](https://usethis.r-lib.org/reference/use_github_action.html) to generate a GitHub action workflow file that runs R cmd check using the latest version of R on 3 operating systems (Linux, Windows, and Mac) and using the development version of R and the 1 older version of R on Linux only. This approach is best for users who may want to customize the workflow file or require custom dependencies or options because the user can edit the GitHub Actions file as they please. You will be responsible for maintaining the GitHub Action on your repository, as updates are NOT pushed automatically from `usethis::use_github_action("check-standard")`.
 
 Alternatively, [ghactions4r::use_r_cmd_check()](https://nmfs-ost.github.io/ghactions4r/reference/use_r_cmd_check.html) can be used to generate a "caller" GitHub Action workflow file that calls a reusable workflow. This package is maintained by staff within NOAA Fisheries' Office of Science and Technology. This approach is best for users who want to use a standard workflow and do not want to maintain their own action. The benefit of this approach is that the bulk of the workflow is maintained within the ghactions4r package, and users can [open issues in the ghactions4r repository](https://github.com/nmfs-ost/ghactions4r/issues/) to report problems in running the workflow. Changes to the ghactions4r workflow are pushed automatically to the user by modifying the reusable workflow within ghactions4r.
 
 
-#### Sample Data
+#### 5. Sample Data Provided
 
-For each tool, provide at least one sample input dataset and the corresponding application results. Include instructions on how to run the application with the dataset, a description of the results and/or a results dataset or plot for comparison.
+For each tool, provide at least one sample input dataset and the corresponding application results. Include instructions on how to run the application with the dataset, a description of the results, and/or a results dataset or plot for comparison.
 
 
-#### Usability tests
+#### 6. Usability Tests
 
 Provide information about usability tests that have been conducted, what was found, and what changes were made as the result of the usability tests.
 
@@ -165,6 +165,7 @@ The user manual should provide clear guidance on navigating the graphical user i
 All UI features should be intuitive and self-explanatory.
 Hover-over help should be available for all widgets.
 The application should provide feedback to the user after every interaction with the GUI, confirming that the action has been processed.
+
 
 
 
