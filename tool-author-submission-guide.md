@@ -1,21 +1,21 @@
 # Tool author submission guide
 
-Thank you for considering your tool for inclusion in the Fisheries Integrated Toolbox (FIT)! This guide is designed to assist tool authors with the submission process and accompanies the reviewer checklist.
+Thank you for considering your tool for inclusion in the Fisheries Integrated Toolbox (FIT)! This guide is designed to assist tool authors with the submission process.
 
 Please inform the FIT committee of any necessary clarifications or corrections by opening an [issue](https://github.com/nmfs-ost/FIT-onboard-and-update/issues).
 
 
 ## Meeting the checklist requirements
 
-Review of software for inclusion in the FIT is checklist-based. A NOAA internal reviewer will assess your tool for the items on the checklist. The purpose of this process is to offer feedback, enabling you to modify your tool to align with the necessary standards for FIT inclusion.
+Review of software for inclusion in the FIT is checklist-based. A NOAA internal reviewer will assess your tool for items on the reviewer checklist. The purpose of this process is to offer feedback, enabling you to modify your tool to align with the necessary standards for FIT inclusion.
 
 The FIT committee recognizes that some checklist items may not be widespread practices within NOAA Fisheries, so this guide is provided as support for implementing new practices.
 
-Below are more descriptions and guidance on how to meet items on the reviewer checklist.
+Below are descriptions and guidance on how to meet criteria on the reviewer checklist.
 
 ### Basics
 
-Everything in the “Basics” section is required.
+Everything in this section is required for inclusion in the FIT.
 
 #### Confirm the tool is in scope
 
@@ -25,15 +25,15 @@ Review the [FIT scope statement](https://noaa-fisheries-integrated-toolbox.githu
 
 To meet this criteria, fill out all required fields of the onboarding form and follow the instructions. The FIT coordinator will let you know if something is missing or needs clarification.
 
-The FIT coordinator will run the metadata against a [JSON schema](https://github.com/nmfs-ost/FIT_web_templating/blob/main/schema_model_list.json) to identify missing information.
+The FIT coordinator will run the metadata against a [JSON schema](https://github.com/nmfs-ost/FIT_web_templating/blob/main/schema_model_list.json) to identify any missing information.
 
-#### Links in metadata work
+#### Links in metadata are active
 
-The FIT coordinator will check that the links provided in the submitted onboarding form work. We suggest developers double check that the links they provide are correct before submitting. Note that one working link is required, but not all links are required. There is no need to worry if your software does not have every type of link listed in the onboarding form.
+The FIT coordinator will check that all links provided in the submitted onboarding form are functioning properly. We suggest developers double check that the links they provide are correct before submitting. Please note that all links listed in the onboarding form are NOT required, as long as there is at least one working metadata link.
 
 #### A License is included
 
-Please note that this guidance is not legal advice.
+FIT licensing guidance provided here is not legal advice.
 
 For comprehensive licensing guidance, refer to the [complete documentation](https://nmfs-opensci.github.io/GitHub-Guide/#sec-license). Generally, if only NOAA federal employees have contributed to a tool, a permissive open license, such as Apache 2.0, is required. The licensing process can be more complex when other contributors are involved. For assistance with software licensing decisions, contact the FIT service account at fisheries.toolbox@noaa.gov.
 
@@ -47,9 +47,9 @@ Do you still need to decide how to [version](https://en.wikipedia.org/wiki/Softw
 
 #### Source code is linked
 
-Generally, source code should be made available for tools on the FIT, as typically NOAA federal employee developed code should have a permissive open source license. However, there may be special instances where code is not made available, such as if confidential fisheries information is included in the codebase.
+Generally, source code should be made available for tools on the FIT, as typically developed NOAA federal employee code should have a permissive open source license. However, there may be special instances where code is not made available, such as if confidential fisheries information is included in the codebase.
 
-#### NOAA Disclaimer on readme
+#### NOAA Disclaimer on ReadMe
 
 For tools with source code, add a [NOAA disclaimer](https://github.com/nmfs-ost/FIT-resource-files?tab=readme-ov-file#noaa-license) on the README.md of the source code:
 
@@ -63,11 +63,11 @@ their endorsement, recommendation or favoring by the Department of Commerce. The
 
 #### Checks for accessibility (Applications only)
 
-Per [section 508 of the Rehabilitation Act](https://www.section508.gov/manage/laws-and-policies/section-508-law/), federal agencies must make their electronic products accessible to people with disabilities. Script-based tools typically are accessible (as text can be read by a screen reader), but additional checks and tests are needed to ensure accessibility for applications. Some tools to help with this are:
+Per [Section 508 of the Rehabilitation Act](https://www.section508.gov/manage/laws-and-policies/section-508-law/), federal agencies must make their electronic products accessible to people with disabilities. Script-based tools typically are accessible (as text can be read by a screen reader), but additional checks and tests are needed to ensure accessibility for applications. Some tools to help with this are:
 
 - Use [ANDI](https://www.ssa.gov/accessibility/andi/help/install.html) or [WAVE](https://wave.webaim.org/) for any applications using web-based technologies. These tools will identify inaccessible content and provide information on changes to make. For Shiny, check out [shinya11y](https://github.com/ewenme/shinya11y) for an alternative checker and accessible tooling options for Shiny.
 - The [18F accessibility checklist](https://guides.18f.org/accessibility/checklist/) can also be helpful for manual checking of accessibility. 
-- [Section508.gov](https://www.section508.gov/) provides extensive information on meeting requirements of section 508.
+- [Section508.gov](https://www.section508.gov/) provides extensive information on meeting requirements of Section 508 compliance.
 
 
 ### Documentation
@@ -165,5 +165,6 @@ The user manual should provide clear guidance on navigating the graphical user i
 All UI features should be intuitive and self-explanatory.
 Hover-over help should be available for all widgets.
 The application should provide feedback to the user after every interaction with the GUI, confirming that the action has been processed.
+
 
 
