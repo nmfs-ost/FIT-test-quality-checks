@@ -72,7 +72,7 @@ Per [Section 508 of the Rehabilitation Act](https://www.section508.gov/manage/la
 
 ### Documentation
 
-To be onboarded to the FIT, a tool must meet the required checklist items.
+Everything in this section is required for inclusion in the FIT.
 
 #### Background Text
 
@@ -80,7 +80,7 @@ The background text should include a description of the tool and its motivation 
 
 #### Installation Instructions
 
-Installation instructions should be provided. The tool reviewer must be able to run them and successfully install the software.
+Installation instructions should be provided. The tool reviewer must be able to follow them and successfully install the software.
 
 If the software does not require user install, e.g., on a web app, no install instructions need to be provided.
 
@@ -90,7 +90,7 @@ For first-time users, a "getting started" example is crucial for orienting them 
 
 #### Citation Instructions
 
-To ensure users properly credit your work, provide citation instructions that include a Digital Object Identifier (DOI). A DOI offers a persistent link to your software or the accompanying paper.
+To ensure users properly credit your work, provide citation instructions that include a Digital Object Identifier (DOI). A DOI offers a persistent link to your software or an accompanying paper.
 
 There are three primary methods for obtaining a DOI for your software:
 
@@ -98,11 +98,11 @@ There are three primary methods for obtaining a DOI for your software:
 2. Software Repository (e.g., [Zenodo](https://zenodo.org/)): Depositing your software in a repository like Zenodo will generate a citable DOI for your submission. This method requires the least effort and time, but it doesn't offer users an additional resource for learning about the tool.
 3. Open Source Software Journal (e.g., [Journal of Open Source Software](https://joss.theoj.org/)): Journals such as the Journal of Open Source Software require a concise paper, allowing software authors to quickly prepare a submission. This option demands less effort than typical academic publications, though the publication timeline can still be lengthy depending on the review process.
 
-#### Tool use documentation
+#### Tool Use Documentation
 
 Tool use documentation, such as a user guide or function reference, should provide instructions on how to use the tool. Examples of such documentation include [roxygen](https://r-pkgs.org/man.html), [doxygen](https://www.doxygen.nl/), and [Sphinx](https://www.sphinx-doc.org/).
 
-#### Advanced features example
+#### Advanced Features Example
 
 An advanced features example provides information on how to run the software for more advanced use cases. If possible, providing a real example can be helpful. The example should be embedded in or linked on the README.md of the source code repository. Otherwise, it should be hosted somewhere easy to find for users of the software.
 
@@ -110,7 +110,7 @@ An advanced features example provides information on how to run the software for
 
 Web-hosted documentation allows users to more easily browse documentation. Common formats are a [pkgdown](https://pkgdown.r-lib.org/) site or a [doxygen](https://doxygen.nl/) site.
 
-For source code that is hosted on GitHub, using GitHub pages to host the documentation may be an option that allows the user to quickly access the web-hosted documentation. 
+For source code that is hosted on GitHub, using GitHub pages to host the documentation may be an option that allows the user to quickly access web-hosted documentation. 
 
 There are [instructions to host a NOAA-themed pkgdown site](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/), which includes a [section on automating the pkgdown rendering](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/#automate-your-pkgdown-rendering).
 
@@ -165,6 +165,7 @@ The user manual should provide clear guidance on navigating the graphical user i
 All UI features should be intuitive and self-explanatory.
 Hover-over help should be available for all widgets.
 The application should provide feedback to the user after every interaction with the GUI, confirming that the action has been processed.
+
 
 
 
