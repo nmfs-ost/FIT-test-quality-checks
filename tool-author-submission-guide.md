@@ -102,23 +102,10 @@ There are three primary methods for obtaining a DOI for your software:
 
 Tool use documentation, such as a user guide or function reference, should provide instructions on how to use the tool. Examples of such documentation include [roxygen](https://r-pkgs.org/man.html), [doxygen](https://www.doxygen.nl/), and [Sphinx](https://www.sphinx-doc.org/).
 
-#### Advanced Features Example
-
-An advanced features example provides information on how to run the software for more advanced use cases. If possible, providing a real example can be helpful. The example should be embedded in or linked on the README.md of the source code repository. Otherwise, it should be hosted somewhere easy to find for users of the software.
-
-#### Web-hosted Documentation
-
-Web-hosted documentation allows users to more easily browse documentation. Common formats are a [pkgdown](https://pkgdown.r-lib.org/) site or a [doxygen](https://doxygen.nl/) site.
-
-For source code that is hosted on GitHub, using GitHub pages to host the documentation may be an option that allows the user to quickly access web-hosted documentation. 
-
-There are [instructions to host a NOAA-themed pkgdown site](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/), which includes a [section on automating the pkgdown rendering](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/#automate-your-pkgdown-rendering).
-
-Other options include hosting [Quarto documentation](https://quarto.org/) on the [NMFS Posit Connect server](https://sites.google.com/noaa.gov/nmfs-hq-st-posit-connect/home).
 
 ### Tests
 
-To be onboarded to the FIT, a tool must meet 4 out of 6 criteria described below.
+To be onboarded to the FIT, a tool must meet the criteria described below.
 
 #### 1. Integrated Tests
 
@@ -132,13 +119,50 @@ For R package developers, this is likely done using the [testthat](https://testt
 
 For applications, consider GUI testing toolkits like shinytest2 for Shiny apps or Selenium for web applications.
 
-#### 3. Test Coverage
+#### 3. Code Coverage
 
 Once a unit testing framework is established, it is possible to calculate test coverage to understand how much of your codebase is being tested.
 
 For R package developers, the [covr](https://covr.r-lib.org/) package provides this functionality. For Python, [Coverage.py](https://coverage.readthedocs.io/en/7.10.2/) and [pytest-cov](https://pypi.org/project/pytest-cov/) are popular tools. For C++, [gcovr](https://gcovr.com/en/stable/) could be used.
 
-#### 4. Automated Testing on a continuous integrated service
+#### 4. Sample Data Provided
+
+For each tool, provide at least one sample input dataset and the corresponding application results. Include instructions on how to run the application with the dataset, a description of the results, and/or a results dataset or plot for comparison.
+
+
+#### 5. Usability Tests
+
+Provide information about usability tests that have been conducted, what was found, and what changes were made as the result of the usability tests.
+
+When testing an app for usability, users should consider the following best practices:
+The user manual should provide clear guidance on navigating the graphical user interface (GUI).
+All UI features should be intuitive and self-explanatory.
+Hover-over help should be available for all widgets.
+The application should provide feedback to the user after every interaction with the GUI, confirming that the action has been processed.
+
+### Sound practice items (not mandatory)
+
+These checklist items could help improve the software's documentation and testing, however they are not required for onboarding to the Fisheries Integrated Toolbox.
+
+#### Advanced Features Example
+
+An advanced features example provides information on how to run the software for more advanced use cases. If possible, providing a real example can be helpful. The example should be embedded in or linked on the README.md of the source code repository. Otherwise, it should be hosted somewhere easy to find for users of the software.
+
+#### Web-hosted Documentation
+
+Web-hosted documentation allows users to more easily browse documentation. Common formats are a [pkgdown](https://pkgdown.r-lib.org/) site or a [doxygen](https://doxygen.nl/) site.
+
+For source code that is hosted on GitHub, using GitHub pages to host the documentation may be an option that allows the user to quickly access web-hosted documentation. 
+
+There are [instructions to host a NOAA-themed pkgdown site](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/), which includes a [section on automating the pkgdown rendering](https://nmfs-ost.github.io/noaa-fit-resources/noaa%20resources/NOAA-pkgdown/#automate-your-pkgdown-rendering).
+
+Other options include hosting [Quarto documentation](https://quarto.org/) on the [NMFS Posit Connect server](https://sites.google.com/noaa.gov/nmfs-hq-st-posit-connect/home).
+ 
+#### Code Coverage is excellent
+
+See the "Code coverage" section in the mandatory testing checklist items. To increase code coverage, untested parts of the codebase should be identified and new unit tests can be added that will run those parts of the codebase. For R packages, the [covr package](https://covr.r-lib.org/index.html) can help identify low and zero coverage locations in the codebase. These tests should be meaningful.
+
+#### Automated Testing on a continuous integrated service
 
 Continuous integration services, such as [GitHub Actions](https://github.com/features/actions) and [Jenkins](https://www.jenkins.io/), automate checks and tests. Running these checks and tests frequently, either on a schedule or when code changes are made, helps to quickly identify and resolve code issues. GitHub Actions is often the simplest to configure if your codebase is already hosted on GitHub.
 
@@ -151,20 +175,6 @@ The first approach is using [`usethis::use_github_action(name = "check-standard"
 Alternatively, [ghactions4r::use_r_cmd_check()](https://nmfs-ost.github.io/ghactions4r/reference/use_r_cmd_check.html) can be used to generate a "caller" GitHub Action workflow file that calls a reusable workflow. This package is maintained by staff within NOAA Fisheries' Office of Science and Technology. This approach is best for users who want to use a standard workflow and do not want to maintain their own action. The benefit of this approach is that the bulk of the workflow is maintained within the ghactions4r package, and users can [open issues in the ghactions4r repository](https://github.com/nmfs-ost/ghactions4r/issues/) to report problems in running the workflow. Changes to the ghactions4r workflow are pushed automatically to the user by modifying the reusable workflow within ghactions4r.
 
 
-#### 5. Sample Data Provided
-
-For each tool, provide at least one sample input dataset and the corresponding application results. Include instructions on how to run the application with the dataset, a description of the results, and/or a results dataset or plot for comparison.
-
-
-#### 6. Usability Tests
-
-Provide information about usability tests that have been conducted, what was found, and what changes were made as the result of the usability tests.
-
-When testing an app for usability, users should consider the following best practices:
-The user manual should provide clear guidance on navigating the graphical user interface (GUI).
-All UI features should be intuitive and self-explanatory.
-Hover-over help should be available for all widgets.
-The application should provide feedback to the user after every interaction with the GUI, confirming that the action has been processed.
 
 
 
