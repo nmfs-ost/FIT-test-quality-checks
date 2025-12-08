@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   add-reviewer-instructions:
-    # This job will only run if the comment body contains the '/generate-reviewer-instructions' command.
+    # This job will only run if the comment body contains the '/generate-review-checklist' command.
     if: startsWith(github.event.comment.body, '/generate-reviewer-instructions') && contains(fromJSON('["OWNER"]'), github.event.comment.author_association)
     runs-on: ubuntu-latest
     steps:
@@ -25,21 +25,12 @@ jobs:
             // The `github.rest.issues.updateComment` method takes the
             // owner, repo, comment_id, and the new body as arguments.
 
-            const body = context.payload.comment.body || '';
-
-            // Try to find the first Github username mention in the comment like "@username"
-            // This captures common usernames containing letters, numbers and hyphens.
-            // If you want to be more permissive, adjust the regex accordingly.
-            const mentionMatch = body.match(/@([A-Za-z0-9-]+)/);
-            const mention = mentionMatch ? `@${mentionMatch[1]}` : '';
-
-            // If a mention was found, greet that user; otherwise use a generic greeting.
-            const greeting = mention ? `${mention}, thank you for volunteering to review this submission to the Fisheries Integrated Toolbox.` :
-                                       'Thank you for volunteering to review this submission to the Fisheries Integrated Toolbox.';
-
+            
+            // Extract and define the users github name
+            //const githubName = context.event.comment.body.match(/\@\S*$/);
             // Define the new checklist in GitHub-flavored Markdown.
             const reviewChecklist = `   
-            ${greeting} This is a checklist-based review.
+            Thank you for volunteering to review this submission to the Fisheries Integrated Toolbox. This is a checklist-based review.
 
             1. Generate your review checklist by commenting on this issue using the command /generate-reviewer-checklist
             2. Fill out the checklist using the submitted information provided by the developer (scroll up to the top of the issue). Helpful hint: Duplicate your browser window to see the developer's submitted intake form and the review checklist simultaneously. 
