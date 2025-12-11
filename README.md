@@ -1,5 +1,7 @@
 # test-quality-checks
-Test out the tool quality checks
+Test out the tool quality checks.
+
+See the .github/workflows folder to preview the checklists.
 
 ## disclaimer
 
