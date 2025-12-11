@@ -14,7 +14,7 @@ permissions:
 jobs:
   add-reviewer-instructions:
     # This job will only run if the comment body contains the '/generate-review-checklist' command.
-    if: startsWith(github.event.comment.body, '/generate-reviewer-instructions') && contains(fromJSON('["OWNER"]'), github.event.comment.author_association)
+    if: startsWith(github.event.comment.body, '/generate-reviewer-instructions') && contains(fromJSON('["OWNER", "MEMBER"]'), github.event.comment.author_association)
     runs-on: ubuntu-latest
     steps:
       - name: Add Reviewer instructions
