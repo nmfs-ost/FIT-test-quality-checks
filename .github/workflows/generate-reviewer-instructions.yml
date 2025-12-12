@@ -46,7 +46,7 @@ jobs:
             4. Please feel free to ask the developer any questions, as this is an open review process.
 
             `:
-            'Please provide the GitHub username of the reviewer by using the command \`/generate-reviewer-instructions @github-name\`.';
+            'Please provide the GitHub username of the reviewer after the command, e.g., \`/generate-reviewer-instructions @github-name\`.';
 
             const finalReviewChecklist = reviewChecklist;
 
