@@ -23,7 +23,7 @@ jobs:
           echo "commenter=${{ github.event.comment.user.login }}"
           echo "github.event.comment.author_association=${{ github.event.comment.author_association }}"
       - name: Add Basics Checklist
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             // This script uses the GitHub REST API to update the comment.
