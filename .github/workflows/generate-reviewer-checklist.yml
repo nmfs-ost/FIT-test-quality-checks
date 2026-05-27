@@ -34,7 +34,10 @@ jobs:
             If you have any questions, you can ask the tool author directly on this thread by using the \`@\` in front of their github username in a comment.
 
             Check off all items that are complete.
+            ## Reviewer Basics
 
+            - [ ] Reviewer has no known [Conflicts of Interest](https://github.com/nmfs-ost/FIT-test-quality-checks/blob/main/reviewer-guide.md#reviewer-conflict-of-interest). If the reviewer has a potential conflict of interest, it should be brought up with the FIT coordinator.
+            
             ## Mandatory items
 
             ### Documentation
