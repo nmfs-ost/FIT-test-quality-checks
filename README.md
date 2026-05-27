@@ -5,8 +5,8 @@ See the .github/workflows folder to preview the checklists.
 
 ## Process for review
 
-1. Author submits tool.
-2. Fit coordinator generates the basics checklist using `/generate-basics-checklist` in an issue comment and completes it.
+1. Author submits tool using the "quality review checklist" issue under https://github.com/nmfs-ost/FIT-test-quality-checks/issues
+2. FIT coordinator generates the basics checklist using `/generate-basics-checklist` in an issue comment and completes it.
 3. Once basics is completed, FIT coordinator identifies a reviewer.
 4. Once a reviewer is identified, the FIT coordinators uses `/generate-reviewer-instructions @reviewer-github-name` to generate instructions for the reviewer.
 5. The reviewer generates their checklist using `/generate-reviewer-checklist` and completes it. They can ask questions to the author as needed.
