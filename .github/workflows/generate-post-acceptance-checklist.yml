@@ -31,8 +31,8 @@ jobs:
 
             For the FIT coordinator
 
-            - [ ] Add to FIT test site and have author verify it looks as expected
-            - [ ] If R package, add to the FIT R universe
+            - [ ] Add to FIT test site and have author verify it looks as expected ([instructions for coordinator](https://github.com/nmfs-ost/fit_web_templating))
+            - [ ] If R package, add to the [FIT R universe](https://noaa-fisheries-integrated-toolbox.r-universe.dev/builds) ([specification file](https://github.com/noaa-fisheries-integrated-toolbox/noaa-fisheries-integrated-toolbox.r-universe.dev/blob/main/packages.json))
             - [ ] Add to FIT production site
 
 
