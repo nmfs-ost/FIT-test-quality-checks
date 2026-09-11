@@ -22,6 +22,18 @@ See the .github/workflows folder to preview the checklists.
   ],
 ```
 
+Example message to software authors once passing (could make this into a github action, potentially). Replace everything in `<>` and remove the `\` from before and after the software badge code:
+```
+@<githubusername> Congrats on <tool name> passing the FIT tool quality checks peer review! 🎉 A badge is now included in the "Code repository badges" section on the [<tool name> FIT page](https://nmfs-ost.github.io/noaa-fit/<tool name>. 
+
+In the meantime, you are welcome to display a badge on your tool’s GitHub readme (optional) that shows that <tool name> has passed the FIT quality checks. The code for doing this is:
+
+\```
+[![A software badge showing that this tool has passed the FIT quality checks](https://img.shields.io/badge/FIT_quality_checks-passed-759A06)](https://nmfs-ost.github.io/noaa-fit)
+\```
+
+```
+
 > Note: Use `/list-commands` to see command options available for use.
 
 ### Reviewing existing tools (section under construction)
