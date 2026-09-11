@@ -11,7 +11,16 @@ See the .github/workflows folder to preview the checklists.
 4. Once a reviewer is identified, the FIT coordinators uses `/generate-reviewer-instructions @reviewer-github-name` to generate instructions for the reviewer.
 5. The reviewer generates their checklist using `/generate-reviewer-checklist` and completes it. They can ask questions to the author as needed.
 6. Once the tool is accepted, the FIT coordinator generates the post-acceptance checklist using `/generate-post-acceptance-checklist` and completes it.
-7. Once the post-acceptance checklist is complete and the author is satisfied with how the page looks on the FIT, the software is included on the FIT production website.
+7. Once the post-acceptance checklist is complete and the author is satisfied with how the page looks on the FIT, the software is included on the FIT production website. Code for adding the software badge:
+
+```json
+  "software_badges":[
+    {
+      "link": "https://img.shields.io/badge/FIT_quality_checks-passed-759A06", 
+      "alt_text": "A software badge showing that this tool has passed the FIT quality checks"
+    }
+  ],
+```
 
 > Note: Use `/list-commands` to see command options available for use.
 
