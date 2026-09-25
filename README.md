@@ -3,6 +3,14 @@ Test out the tool quality checks.
 
 See the .github/workflows folder to preview the checklists.
 
+## Instructions for developer
+
+**TODO: provide a link on what "ready for FIT" means.
+
+Thank you for submitting your software to the Fisheries Integrated Toolbox! To request a review, please first confirm that your software is ready for FIT and [in scope for FIT](https://nmfs-ost.github.io/noaa-fit-resources/about/#scope-statement), then [open an issue](https://github.com/nmfs-ost/FIT-test-quality-checks/issues), filling out the Quality Review Request Form.
+
+After submitting, some basic checks will occur before the software is assigned a peer reviewer who will review the materials you provide to being checking off components of the checklist. This is a checklist-based review, where all mandatory items must be checked off before the software can be onboarded to the FIT.
+
 ## Process for review
 
 1. Author submits tool using the "quality review checklist" issue under https://github.com/nmfs-ost/FIT-test-quality-checks/issues
