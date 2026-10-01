@@ -33,6 +33,7 @@ jobs:
             - \`/generate-reviewer-instructions @github-name\` edits the comment with the reviewer instructions for a user with the github username \`@github-name\`. This is intended for the FIT coordinator (requires owner permissions on the repository).
             - \`/generate-reviewer-checklist\` edits the comment with the reviewer checklist. This is intended for the reviewer (requires owner or member permissions on the repository).
             - \`/generate-post-acceptance-checklist\` edits the comment with the post-acceptance checklist. This is intended for the FIT coordinator (requires owner permissions on the repository).
+            - \`/generate-acceptance-message\` edits the comment with an acceptance message using the issue author's GitHub username and the submitted tool name. This is intended for the FIT coordinator (requires owner or member permissions on the repository).
             - \`/list-commands\` lists all the available commands in a new comment.
             `;
 

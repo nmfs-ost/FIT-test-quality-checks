@@ -19,28 +19,8 @@ After submitting, some basic checks will occur before the software is assigned a
 4. Once a reviewer is identified, the FIT coordinators uses `/generate-reviewer-instructions @reviewer-github-name` to generate instructions for the reviewer.
 5. The reviewer generates their checklist using `/generate-reviewer-checklist` and completes it. They can ask questions to the author as needed.
 6. Once the tool is accepted, the FIT coordinator generates the post-acceptance checklist using `/generate-post-acceptance-checklist` and completes it.
-7. Once the post-acceptance checklist is complete and the author is satisfied with how the page looks on the FIT, the software is included on the FIT production website. Code for adding the software badge:
-
-```json
-  "software_badges":[
-    {
-      "link": "https://img.shields.io/badge/FIT_quality_checks-passed-759A06", 
-      "alt_text": "A software badge showing that this tool has passed the FIT quality checks"
-    }
-  ],
-```
-
-Example message to software authors once passing (could make this into a github action, potentially). Replace everything in `<>` and remove the `\` from before and after the software badge code:
-```
-@<githubusername> Congrats on <tool name> passing the FIT tool quality checks peer review! 🎉 A badge is now included in the "Code repository badges" section on the [<tool name> FIT page](https://nmfs-ost.github.io/noaa-fit/<tool name>. 
-
-In the meantime, you are welcome to display a badge on your tool’s GitHub readme (optional) that shows that <tool name> has passed the FIT quality checks. The code for doing this is:
-
-\```
-[![A software badge showing that this tool has passed the FIT quality checks](https://img.shields.io/badge/FIT_quality_checks-passed-759A06)](https://nmfs-ost.github.io/noaa-fit)
-\```
-
-```
+7. Once the post-acceptance checklist is complete and the author is satisfied with how the page looks on the FIT, the software is included on the FIT production website.
+8. The FIT coordinator comments `/generate-acceptance-message` on the submission issue to generate an acceptance message tagging the author and providing the FIT quality checks badge code.
 
 > Note: Use `/list-commands` to see command options available for use.
 
@@ -49,7 +29,7 @@ In the meantime, you are welcome to display a badge on your tool’s GitHub read
 These software already have metadata in the FIT. What needs to happen is:
 1. Author reviews metadata and changes it as needed.
 2. Author adds additional info needed for the peer review process, should not need to re-enter existing metadata.
-3. Complete 2-7 for the software tool.
+3. Complete 2-8 for the software tool.
 
 
 ## disclaimer
