@@ -77,16 +77,9 @@ jobs:
                 const body = `${marker}
             @${issue.user.login}, thank you for submitting your tool for FIT quality review!
 
-            1. The FIT coordinator uses \`/generate-basics-checklist\` to check metadata and documentation completeness, aiming for one week from submission.
-            2. After basic checks pass, the coordinator identifies a reviewer and posts \`/generate-reviewer-instructions @reviewer-github-name\` using the reviewer's username.
-            3. The reviewer posts \`/generate-reviewer-checklist\`, verifies installation and the example, and evaluates your testing narrative, language-specific check results, and greater than 40% line coverage. Peer review targets four weeks from assignment, beginning with a suggested 90-minute session.
-            4. You and the reviewer discuss findings and revisions here. Timeframes are targets, not hard deadlines; agree on extensions in this issue.
-            5. Once mandatory checks pass, the coordinator uses \`/generate-post-acceptance-checklist\` to complete publication with you.
-            6. After the production page is live, the coordinator posts \`/generate-acceptance-message\` to provide confirmation and badge code.
+              See the README for the [peer review sequence](https://github.com/nmfs-ost/FIT-test-quality-checks/blob/main/README.md#process-for-review) and [required commands](https://github.com/nmfs-ost/FIT-test-quality-checks/blob/main/README.md#command-quick-reference).
 
-            Keep review questions and updates in this submission issue; no separate onboarding issue is needed. Link existing documentation and logs rather than duplicating them. Coordinator commands require owner or member association; the reviewer checklist also allows collaborators. The coordinator can use \`/list-commands\` for command help.
-
-            See the [review process and command reference](https://github.com/nmfs-ost/FIT-test-quality-checks/blob/main/README.md#process-for-review) and [author guide](https://github.com/nmfs-ost/FIT-test-quality-checks/blob/main/tool-author-submission-guide.md).`;
+              Please keep review questions and updates in this submission issue.`;
                 await github.rest.issues.createComment({ ...issueParams, body });
               }
               if (issue.labels.some(label => stages.some(existing => existing.name === label.name))) {

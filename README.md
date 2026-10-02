@@ -47,16 +47,11 @@ Post commands at the start of a new comment on the submission issue. Coordinator
 
 ### Example review
 
-1. An author opens a Quality Review Request for the tool, supplying the repository URL, reviewed commit, testing narrative, check logs, and coverage report.
-2. Within a week, the coordinator posts `/generate-basics-checklist`, checks metadata and documentation completeness, and asks the author to fill any gaps in the same issue.
-3. After those checks pass, the coordinator finds a reviewer without a conflict of interest and posts `/generate-reviewer-instructions @reviewer-github-name` using the actual reviewer's username.
-4. The reviewer posts `/generate-reviewer-checklist`, starts with a 90-minute session, installs the tool, runs the example and documented tests, and records results or blockers. The author responds and supplies updated evidence as needed; the target is four weeks from assignment.
-5. When all mandatory items are verified, the coordinator posts `/generate-post-acceptance-checklist` and completes publication with the author. Optional sound practices can remain unchecked.
-6. Once the production page is live, the coordinator posts `/generate-acceptance-message` to notify the author and provide badge code.
+See the [fishprior review](https://github.com/nmfs-ost/FIT-test-quality-checks/issues/48).
 
 ### Submission and status automation
 
-New issues with the `Review Request` label receive one welcome comment explaining the sequence and commands. Applying that label to an existing issue also initializes it; reruns do not duplicate the welcome or reset an existing review stage. Pull requests and unrelated issues are excluded.
+New issues with the `Review Request` label receive one welcome comment linking to the peer review sequence and command reference in this README. Applying that label to an existing issue also initializes it; reruns do not duplicate the welcome or reset an existing review stage. Pull requests and unrelated issues are excluded.
 
 | Stage label | Trigger |
 | --- | --- |
